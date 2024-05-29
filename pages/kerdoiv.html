@@ -2,19 +2,18 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/kerdoiv.css" />
-    <link rel="icon" type="image/x-icon" href="../imgaes/Rectangle 17.png">
-    <title>C.O.R.E.</title>
+    <link rel="icon" type="image/x-icon" href="../imgaes/LOGO_javitott.png">
+    <title>C.O.R.E. Kérdőív</title>
 </head>
 
 <body>
-
     <!-- Navbar -->
     <div class="div-back">
         <div class="div-back-seventyfive">
-
             <div class="div-mid">
                 <div class="div-mid-fifty">
                     <div class="div-front">
@@ -25,30 +24,87 @@
                 <div class="div-mid-hundred">
                     <text class="headerText">Kérdések</text>
                 </div>
-
-
             </div>
         </div>
         <div class="div-back-hundred">
             <div class="placeholderLogo"></div>
         </div>
     </div>
-
     <!-- Body -->
     <div class="contentKerdoiv">
-
         <div class="innerContainerLeftKerdoiv">
-            <div class="bigTextKerdoiv">C.O.R.E. - Felsővezetői kérdőív</div>
-            <div class="mediumTextKerdoiv">Kérjük, egy 4-es skálán értékelje, hogy milyen mértékben tartja jellemzőnek a munkahelyi körülményeire és az Ön
-            munkájára a következő állításokat. Lehetséges, hogy egyes tételek jobban vonatkoznak a munkahelyi környezetére, mások
-            kevésbé, de kérjük, minden állítást értékeljen.</div>
+            <div class="textContainer">
+                <div class="bigTextKerdoiv">C.O.R.E. - Felsővezetői kérdőív</div>
+                <div class="mediumTextKerdoiv">Kérjük, egy 4-es skálán értékelje, hogy milyen mértékben tartja jellemzőnek a
+                    munkahelyi körülményeire és az Ön munkájára a következő állításokat. Lehetséges, hogy egyes tételek
+                    jobban vonatkoznak a munkahelyi környezetére, mások kevésbé, de kérjük, minden állítást értékeljen.
+                </div>
+            </div>
 
-        </div>
+
         <div class="innerContainerRightKerdoiv">
             <div class="questioningManKerdoiv"></div>
         </div>
 
+        </div>
+
     </div>
+
+
+
+    <div class="kerdoivKerdesekContainer">
+    
+        <div class="progressBarContainer">
+    <div class="progressBar">
+        <div class="progressBarBar"></div>
+    </div>
+        </div>
+
+        <div class="greyContainer">
+                <!-- Select -->
+                <div class="kerdoivKerdesek" id="question-list">
+                    <!-- Questions will be dynamically generated here -->
+                </div>
+
+                <!-- Slider -->
+                <div class="questionContainerKerdoiv">
+                    <div class="questiontextContainer">
+                        <div class="KerdesTextkerodiv">
+                            1. Nagyon Komoly kerdes
+                        </div>
+                    </div>
+
+                        <div class="slider-containerR">
+                            <div class="movingPercentageTextContainer">
+                                <div class="movingPercentageText" id="percentage">50%</div>
+                            </div>
+                            <input type="range" min="1" max="100" value="50" class="sliderR" id="myRangeR">
+                        </div>
+
+                    <div class="percentageContainer">
+                        <div class="optionText left">1%
+                        </div>
+                        <div class="optionText right">100%
+                        </div>
+                    </div>
+                    <div class="hr"></div>
+
+                </div>
+
+
+                <!-- Button -->
+                <div class="button">
+                    <text class="buttonText">Tovább</text>
+                    <div class="buttonImage"></div>
+                </div>
+        </div>
+
+
+    </div>
+
+    <script src="../scripts/kerdoiv.js"></script>
+    <script src="../scripts/index.js"></script>
+
 
 </body>
 

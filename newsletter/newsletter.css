@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'Alata-Regular';
+    /* Name of the font */
+    src: url('../fonts/Alata-Regular.ttf') format('truetype');
+    /* Path to the font file */
+}
+
+body {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    background-image: url('../imgaes/hatter.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logoContainer {
+    width: 100%;
+    height: 70px;
+
+}
+.logoBackground{
+    width: 300px;
+    height: 100%;
+    background-image: url('../imgaes/rva-hosszu-nyil.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+        /* Maintain height, adjust width */
+    background-position: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 120;
+}
+.logoImage{
+    height: 90%;
+    width: auto;
+    aspect-ratio: 1.27;
+    background-image: url('../imgaes/logo1x1.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+        /* Maintain height, adjust width */
+    background-position: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    z-index: 120;
+}
+.logoText{
+    font-size: 35px;
+    color: #fff;
+    text-shadow: 2px 2px #0004;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+        /* Use the imported font */
+    margin: 5px;
+    z-index: 120;
+}
+
+.greyContainer{
+    width: 280px;
+    height: auto;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    background-color: #90848475;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.bigTextContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.manContainer{
+    position: absolute;
+    left: -5px;
+    top: 90px;
+    width: 35%;
+    aspect-ratio: 0.9;
+    background-image: url('../imgaes/tajekoztato-figura.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+}
+.manContainerProud{
+    position: absolute;
+    left: -5px;
+    top: 90px;
+    width: 35%;
+    aspect-ratio: 0.9;
+    background-image: url('../imgaes/Rectangle\ 12.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+}
+.bigText{
+    font-size: 16px;
+    color: #454E24;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+    margin: 20px; 
+    margin-left: 25%;
+    margin-right: 10%;
+    margin-top: 30px;
+    text-align: center;
+    z-index: 50;
+}
+.mediumText {
+    font-size: 14px;
+    color: #454E24;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+    margin: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+    text-align: center;
+    z-index: 50;
+}
+.smalltext{
+    font-size: 10px;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+    margin: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+.button {
+    background-color: #51BCDA;
+    border: 6px solid #B5FEEC;
+    box-shadow: 2px 2px #0004;
+    height: 50px;
+    aspect-ratio: 3.5;
+    border-radius: 100px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.5s ease-in-out;
+    transition: border-color 0.5s ease-in-out;
+}
+
+.button:hover {
+    border-color: #51BCDA;
+    background-color: #006466;
+}
+
+.button:hover .buttonImage {
+    margin-left: 15px;
+}
+
+.button:hover .buttonText {
+    margin-left: 15px;
+}
+
+.buttonText {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+    margin: 5px;
+    text-shadow: 1px 1px #0004;
+    z-index: 50;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.buttonImage {
+    height: 80%;
+    width: auto;
+    aspect-ratio: 0.82;
+    background-image: url('../imgaes/Rectangle\ 33.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    margin-left: 5px;
+    margin-right: -15px;
+    z-index: 49;
+    transition: margin-left 0.3s ease-in-out;
+}
+.blackContainer{
+    width: 280px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #767676;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}

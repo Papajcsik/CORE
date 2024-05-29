@@ -1,0 +1,914 @@
+@font-face {
+    font-family: 'Alata-Regular';
+    /* Name of the font */
+    src: url('../fonts/Alata-Regular.ttf') format('truetype');
+    /* Path to the font file */
+}
+.contentContainerKimutatas{
+    width: 100%;
+    height: auto;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 40px;
+    /* border: 1px solid #000; */
+}
+.kimutatasNavbarContainer{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    transition: flex-wrap 0.3s ease-in-out;
+    transition: height 0.8s ease-in-out;
+    /* border: 1px solid #000; */
+}
+.kimutatasNavButtonContainer{
+    width: auto;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin: 1px;
+    /* border: 1px solid #000; */
+}
+.kimutatasButtonTextContainer{
+    height: 87.8%;
+    width: auto;
+    background-size: auto 100%;
+    background-position: top;
+    background-repeat: repeat-x;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    text-wrap: wrap;
+    text-align: center;
+    transition: background-image 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+    margin-top: 1px;
+    cursor: pointer;
+}
+.bevezetoContainer{
+    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto01.png');
+}
+.neutralContainer{
+    background-image: url('../imgaes//core-header-gomb-kimutatosemleges01.png');
+}
+.goodContainer {
+    background-image: url('../imgaes//core-header-gomb-kimutatogood01.png');
+}
+.badContainer {
+    background-image: url('../imgaes/core-header-gomb-kimutato-.bad01.png');
+}
+.neutralMan{
+    height: 100%;
+    aspect-ratio: 0.62;
+    background-image: url('../imgaes/semleges-figura-_bland.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.questionManKerdoiv {
+    height: 100%;
+    aspect-ratio: 0.943;
+    background-image: url('../imgaes/kerdoiv-figura_bland.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.proudManKerdoiv {
+    height: 100%;
+    aspect-ratio: 1.08;
+    background-image: url('../imgaes/healthy-figura_bland.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.depressedManKerdoiv{
+    height: 100%;
+    aspect-ratio: 0.943;
+    background-image: url('../imgaes/kiegett-figura_bland.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.buttonText{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+    padding-top: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.greenButtonStroke{
+    -webkit-text-stroke: 0.2px #293E07; /* Adds the stroke */
+    text-shadow: 
+        -1px -1px 0 #293E07,
+        1px -1px 0 #293E07,
+        -1px 1px 0 #293E07,
+        1px 1px 0 #293E07; /* Simulates an outside stroke */
+}
+.redButtonStroke {
+    -webkit-text-stroke: 0.2px #681300;
+    /* Adds the stroke */
+    text-shadow:
+        -1px -1px 0 #681300,
+        1px -1px 0 #681300,
+        -1px 1px 0 #681300,
+        1px 1px 0 #681300;
+    /* Simulates an outside stroke */
+}
+.kimutatasButtonArrowContainer{
+    height: 89%;
+    aspect-ratio: 1.138;
+    background-repeat: no-repeat;
+    /* background-size: auto 100%; */
+    background-size: contain;
+    background-position: top;
+    margin-top: 1.2px;
+    margin-left: -35px;
+    transition: background-image 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+}
+/* ////////// */
+.bevezetuArrowImage{
+    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto11.png');
+
+}
+.neutralArrowImage{
+    background-image: url('../imgaes/core-header-gomb-kimutatosemleges11.png');
+}
+.goodArrowImage{
+    background-image: url('../imgaes/core-header-gomb-kimutatogood011.png');
+}
+.badArrowImage {
+    background-image: url('../imgaes/core-header-gomb-kimutato-.bad11.png');
+}
+/* //////////////////////////////// */
+.kimutatasButtonTextContainer:hover+.badArrowImage {
+    background-image: url('../imgaes/core-header-gomb-kimutato-.bad12.png') !important;
+    /* margin-left: -3px !important; */
+}
+
+.badArrowImage:hover {
+    background-image: url('../imgaes/core-header-gomb-kimutato-.bad12.png') !important;
+    margin-left: -3px !important;
+}
+.badArrowImage.active {
+    background-image: url('../imgaes/core-header-gomb-kimutato-.bad12.png') !important;
+    margin-left: -3px !important;
+}
+/* ///////////// */
+.kimutatasButtonTextContainer:hover+.bevezetuArrowImage {
+    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto12.png') !important;
+    margin-left: -3px !important;
+}
+
+.bevezetuArrowImage:hover {
+    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto12.png') !important;
+    margin-left: -3px !important;
+}
+.bevezetuArrowImage.active {
+    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto12.png') !important;
+    margin-left: -3px !important;
+}
+/* ///////////// */
+
+.kimutatasButtonTextContainer:hover+.neutralArrowImage {
+    background-image: url('../imgaes/core-header-gomb-kimutatosemleges12.png') !important;
+    margin-left: -3px !important;
+}
+.neutralArrowImage:hover{
+    background-image: url('../imgaes/core-header-gomb-kimutatosemleges12.png') !important;
+    margin-left: -3px !important;
+}
+.neutralArrowImage.active {
+    background-image: url('../imgaes/core-header-gomb-kimutatosemleges12.png') !important;
+    margin-left: -3px !important;
+}
+/* /////////////////// */
+.kimutatasButtonTextContainer:hover+.goodArrowImage  {
+    background-image: url('../imgaes/core-header-gomb-kimutatogood012.png') !important;
+    margin-left: -3px !important;
+}
+
+.goodArrowImage:hover {
+    background-image: url('../imgaes/core-header-gomb-kimutatogood012.png') !important;
+    margin-left: -3px !important;
+}
+.goodArrowImage.active{
+    background-image: url('../imgaes/core-header-gomb-kimutatogood012.png') !important;
+    margin-left: -3px !important;
+}
+
+/* ////////////////////////////// */
+
+.InnerContentContainer{
+    height: auto;
+    width: auto;
+    display: none;
+
+}
+.InnerContentContainer.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hiddenContent{
+    display: none;
+}
+
+/* ////////////////////////////////////// */
+
+.bigtextContainer{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 5px;
+    background-color: #cfeac0;
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.rowToColumn{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.imageOfMan{
+    width: 150px;
+    aspect-ratio: 1.08;
+    background-image: url('../imgaes/healthy-figura_bland.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+.imageOfDepressedMan {
+    width: 150px;
+    aspect-ratio: 0.943;
+    background-image: url('../imgaes/kiegett-figura_bland.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+.vr{
+    width: 5px;
+    height: 200px;
+    background-color: #0C594B;
+    border-radius: 5px;
+}
+.summaryTextContainer{
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.summarytextInner{
+    height: 70%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.summarytext{
+    text-wrap: wrap;
+    text-align: center;
+    font-size: 22px;
+    color: #0C594B;
+        font-weight: 600;
+        /* -webkit-text-stroke: 0.1px #fff; */
+        /* text-shadow:
+            -1px -1px 0 #0C594B,
+            1px -1px 0 #0C594B,
+            -1px 1px 0 #0C594B,
+            1px 1px 0 #0C594B; */
+    letter-spacing: 1px;
+        /* Simulates an outside stroke */ 
+    font-family: 'Alata-Regular', sans-serif;
+    /* text-shadow: 2px 2px #0004; */
+}
+
+.moreText {
+    text-wrap: wrap;
+    text-align: center;
+    font-size: 16px;
+    color: #002720;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+    max-width: 72%;
+    margin: 5px;
+}
+
+.selectModesContainer{
+    width: 70%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.sajatEredmenyGomb{
+    height: 100%;
+    aspect-ratio: 3;
+    border: 2px solid #000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.sajatZold{
+ background-color: #acbc73;
+    border: 2px solid #0C594B;
+}
+.sajatPiros{
+ background-color: #dc827e;
+    border: 2px solid #681300;
+}
+.csoportEredmenyGomb{
+    height: 100%;
+    aspect-ratio: 3;
+    border: 2px solid #000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+
+}
+.csoportZold{
+    background-color: #92c58b;
+    border: 2px solid #0C594B;
+}
+.csoportPiros{
+    background-color: #a13030;
+    border: 2px solid #681300;
+}
+.OrszagosAtlagGomb{
+    height: 100%;
+    aspect-ratio: 3;
+    border: 2px solid #000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.orszagosZold{
+    background-color: #a6bb88;
+    border: 2px solid #0C594B;
+}
+.orszagosPiros{
+    background-color: #953247;
+    border: 2px solid #681300;
+}
+.selectorButtonText{
+    text-wrap: wrap;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: 'Alata-Regular', sans-serif;
+
+}
+.chartSectionContainer {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    /* border: 1px solid #000; */
+}
+
+.informationColumn {
+    width: 25%;
+    aspect-ratio: 2.7;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-radius: 20px;
+    /* border: 1px solid #000; */
+}
+.informationGreen{
+    background-color: #cfeac0;
+}
+.informationRed{
+    background-color: #b95c5d;
+}
+.informationColumnInner{
+    height: 100%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.rightLine{
+    height: 100%;
+    width: 7px;
+    border-radius: 5px;
+    margin-right: -5px;
+    z-index: 20;
+}
+.greenLine {
+    background-color: #0C594B;
+}
+.redLine {
+    background-color: #681300;
+}
+.informationText{
+    text-wrap: wrap;
+    text-align: center;
+    font-size: 22px;
+    color: #0C594B;
+        font-weight: 600;
+        /* -webkit-text-stroke: 0.1px #fff; */
+        /* text-shadow:
+            -1px -1px 0 #0C594B,
+            1px -1px 0 #0C594B,
+            -1px 1px 0 #0C594B,
+            1px 1px 0 #0C594B; */
+    letter-spacing: 1px;
+    font-family: 'Alata-Regular', sans-serif;
+    margin-bottom: 5px;
+    width: 90%;
+}
+.greenText{
+    color: #0C594B;
+}
+.redText{
+    color: #681300;
+}
+.hrKimutatas{
+    width: 90%;
+    height: 5px;
+    border-radius: 5px;
+    margin-bottom: 10%;
+}
+.greenHr{
+    background-color: #0C594B;
+}
+.redHr{
+    background-color: #681300;
+}
+.chartColumn {
+    width: 75%;
+    height: auto;
+    aspect-ratio: 7.5203;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    /* border: 1px solid #000; */
+}
+
+.chartBgImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../imgaes/kimutatas-uj_hatter_slice_halvanyabb_but_not_mobilverzion.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 11;
+}
+
+.greyBox {
+    height: 95%;
+    width: 60%;
+    background-color: #D9D9D9;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 0%;
+}
+
+.darkGreyBox {
+    height: 100%;
+    width: 60%;
+    background-color: #b3b3b390;
+}
+
+.chartRow1 {
+    width: 99.7%;
+    height: 90%;
+    margin-left: 0.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: 1px solid #000; */
+    position: relative;
+    z-index: 10;
+}
+
+.chartRow2 {
+    width: 99.7%;
+    height: 90%;
+    margin-left: 0.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 5.2%;
+    border: 1px solid #000;
+}
+
+.chartRow3 {
+    width: 99.7%;
+    height: 90%;
+    margin-left: 0.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 5.1%;
+    border: 1px solid #000;
+}
+.chartImage1,
+.chartImage2,
+.chartImage3,
+.chartImage4,
+.chartImage5,
+.chartImage6 {
+    height: 33%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right;
+    border: 0px solid #000;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    /* Combine transitions */
+}
+
+.chartImage1 {
+    width: 100%;
+    background-image: url('../imgaes/kimutatas-nyilakgood1\ \(1\).png');
+}
+
+.chartImage2 {
+    width: 81%;
+    background-image: url('../imgaes/kimutatas-nyilakgood2\ \(1\).png');
+}
+
+.chartImage3 {
+    width: 6%;
+    background-image: url('../imgaes/kimutatas-nyilakgood3\ \(1\).png');
+}
+.chartImage4 {
+    width: 80%;
+    background-image: url('../imgaes/kimutatas-nyilakbad1.png');
+}
+
+.chartImage5 {
+    width: 93%;
+    background-image: url('../imgaes/kimutatas-nyilakbad2.png');
+}
+
+.chartImage6 {
+    width: 90%;
+    background-image: url('../imgaes/kimutatas-nyilakbad3.png');
+}
+.hidden {
+    width: 0 !important;
+    height: 0 !important;
+}
+.nextButtonContainer{
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttonTextIndex{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+    margin: 5px;
+    text-shadow: 1px 1px #0004;
+    z-index: 50;
+    transition: margin-left 0.3s ease-in-out;
+}
+.lowMidHighContainer{
+    width: 65%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 22.5%;
+    /* border: 1px solid #000; */
+}
+.low{
+    height: 100%;
+    aspect-ratio: 3.98;
+    background-image: url('../imgaes/kimutatas-trapezgombok.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #000; */
+
+}
+.mid{
+    height: 100%;
+    aspect-ratio: 3.98;
+    background-image: url('../imgaes/kimutatas-trapezgombok2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #000; */
+}
+.high{
+    height: 100%;
+    aspect-ratio: 3.98;
+    background-image: url('../imgaes/kimutatas-trapezgombok3.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #000; */
+}
+.lowMidHighText{
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+
+}
+/* ///////////////////////////////////////////////////////////////// */
+@media (max-width: 1000px) {
+
+.informationText{
+    font-size: 18px;
+}
+.summarytext{
+    font-size: 18px;
+}
+}
+
+@media (max-width: 900px) {
+.lowMidHighContainer{
+    height: 40px;
+}
+}
+@media (max-width: 850px) {
+.kimutatasNavButtonContainer{
+    height: 50px;
+}
+.buttonText{
+    font-size: 16px;
+}
+.kimutatasButtonArrowContainer{
+    margin-left: -30px;
+}
+.selectModesContainer{
+    height: 50px;
+    width: 90%;
+}
+.selectorButtonText{
+    font-size: 16px;
+}
+
+}
+@media (max-width: 750px) {
+.chartBgImage{
+    background-image: url('../imgaes/kimutatas-uj_hatter_slice_halvanyabb_but_not_mobilverzion.png');
+}
+.rowToColumn{
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 10px;
+}
+.vr{
+height: 5px;
+width: 160px;
+}
+.imageOfMan{
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+.imageOfDepressedMan{
+    margin-bottom: 20px;
+    margin-top: 0px; 
+}
+.summaryTextContainer{
+    margin-top: 15px;
+}
+.lowMidHighContainer {
+    height: 30px;
+}
+.lowMidHighText {
+    font-size: 12px;
+}
+
+.chartSectionContainer{
+    flex-direction: column;
+    margin-top: 10px;
+}
+.chartColumn{
+    width: 100%;
+}
+.rightLine{
+    display: none;
+}
+.informationColumn{
+    width: 50%;
+    aspect-ratio: 5;
+}
+.informationColumnInner{
+    align-items: center;
+}
+.hrKimutatas{
+    margin-bottom: 0px;
+}
+.lowMidHighContainer{
+    margin-left: 0px;
+}
+}
+
+@media (max-width: 600px) {
+
+.kimutatasNavButtonContainer{
+    height: 45px;
+}
+.buttonText{
+    font-size: 12px;
+    text-wrap: nowrap;
+}
+.kimutatasButtonArrowContainer{
+    margin-left: -25px;
+}
+.redButtonStroke{
+    -webkit-text-stroke: 0.1px #681300;
+    letter-spacing: 1.5px;
+    text-shadow: 
+        -0.7px -0.7px 0 #681300,
+        0.7px -0.7px 0 #681300,
+        -0.7px 0.7px 0 #681300,
+        0.7px 0.7px 0 #681300; /* Simulates an outside stroke */
+}
+.greenButtonStroke{
+    -webkit-text-stroke: 0.1px #293E07;
+    letter-spacing: 1.5px;
+    text-shadow: 
+        -0.7px -0.7px 0 #293E07,
+        0.7px -0.7px 0 #293E07,
+        -0.7px 0.7px 0 #293E07,
+        0.7px 0.7px 0 #293E07; /* Simulates an outside stroke */
+}
+
+.bigtextContainer{
+    flex-direction: column;
+}
+.chartSectionContainer{
+    width: 99%;
+}
+.informationText {
+    font-size: 14px;
+}
+.hrKimutatas{
+    height: 4px;
+}
+.lowMidHighContainer{
+    width: 90%;
+}
+.summaryTextContainer{
+    height: 120px;
+    width: 90%;
+}
+.summarytextInner{
+    height: 80%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 25px;
+}
+.summarytext{
+    max-width: 50%;
+}
+.moreText{
+    max-width: 99%;
+}
+.selectModesContainer{
+    height: 40px;
+}
+.selectorButtonText{
+    font-size: 12px;
+}
+
+}
+@media (max-width: 500px) {
+.kimutatasNavButtonContainer{
+    height: 40px;
+}
+.buttonText{
+    font-size: 10px;
+    text-wrap: nowrap;
+}
+.kimutatasButtonArrowContainer{
+    margin-left: -25px;
+}
+
+}
+@media (max-width: 450px) {
+    .kimutatasNavButtonContainer {
+        height: 35px;
+    }
+
+    .buttonText {
+        font-size: 10px;
+        text-wrap: wrap;
+    }
+
+    .kimutatasButtonArrowContainer {
+        margin-left: -20px;
+    }
+
+.selectModesContainer {
+    justify-content: space-between;
+    width: 95%;
+    height: 30px;
+}
+
+.selectorButtonText {
+    font-size: 10px;
+}
+
+}
+
+@media (max-width: 400px) {
+.lowMidHighContainer{
+    height: 20px;
+}
+.lowMidHighText{
+    font-size: 10px;
+}
+.summaryTextContainer{
+    height: 160px;
+    margin-bottom: 10px;
+}
+.summarytextInner{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.summarytext {
+    max-width: 95%;
+}
+}

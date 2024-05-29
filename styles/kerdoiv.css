@@ -11,9 +11,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     margin-top: 40px;
-    align-items: center;
+    align-items: center !important;
     /* border: solid 1px #000; */
     z-index: 100;
     padding-bottom: 30px;
@@ -21,8 +20,18 @@
 .innerContainerLeftKerdoiv {
     width: 60%;
     height: auto;
-    padding: 5px;
-    padding-right: 85px;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+    /* border: solid 1px #000; */
+
+}
+.textContainer{
+    height: 90%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -30,23 +39,26 @@
     align-items: left;
     background-color: #90848475;
     box-shadow: 2px 2px 2px 2px #0002;
-
+    /* border: solid 1px #000; */
+    padding-right: 10%;
 }
 .innerContainerRightKerdoiv{
-    width: 5%;
+    position: relative;
+    right: 10%;
+    top: 15%;
+    width: 10%;
     height: auto;
 }
 .questioningManKerdoiv{
     position: relative;
-    width: 300%;
+    width: 250px;
     aspect-ratio: 0.9;
-    background-image: url('../imgaes/kerdoiv-figura.png');
+    background-image: url('../imgaes/kerdoiv-figura_bland.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     z-index: 20;
-    margin-top: -20%;
-    margin-left: -100%;
+
 }
 .bigTextKerdoiv{
     font-size: 32px;
@@ -56,7 +68,7 @@
     font-family: 'Alata-Regular', sans-serif;
     margin: 10px; 
     z-index: 50;
-        text-shadow: 1px 1px #0004;
+    text-shadow: 1px 1px #0004;
 }
 .mediumTextKerdoiv{
     font-size: 22px;
@@ -64,7 +76,526 @@
     font-weight: 500;
     font-family: 'Alata-Regular', sans-serif;
     margin: 10px; 
-    text-align: center;
     z-index: 50;
     text-align: left;
+}
+.KerdesTextkerodiv{
+    font-size: 22px;
+    color: #454E24;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+    margin: 10px; 
+    z-index: 50;
+    text-align: left;
+}
+.centerText{
+    text-align: center;
+}
+.kerdoivKerdesekContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    /* border: solid 1px #000; */
+    z-index: 100;
+    padding-bottom: 30px; 
+}
+.kerdoivKerdesek{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.greyContainer {
+    width: 65%;
+    height: auto;
+    background-color: #90848475;
+    box-shadow: 2px 2px 2px 2px #0002;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: solid 1px #000; */
+}
+.questionContainerKerdoiv{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+.questiontextContainer{
+    height: auto;
+    width: 95%;
+    align-items: flex-start;
+}
+/* //////////////////////// */
+.hidden-thumb::-webkit-slider-thumb {
+    display: none;
+}
+
+.hidden-thumb::-moz-range-thumb {
+    display: none;
+}
+
+.hidden-thumb::ms-thumb {
+    display: none;
+}
+/* Slider CSS */
+.slider-container {
+    position: relative;
+    width: 95%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #51BCDA;
+    outline: none;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px 1px #0002;
+    
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    aspect-ratio: 1.08;
+    background: url('../imgaes/javitottTriangle_halvany.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    position: relative;
+    z-index: 30 !important;
+    margin-bottom: 10px;
+
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    aspect-ratio: 1.08;
+    background: url('../imgaes/javitottTriangle_halvany.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    position: relative;
+    z-index: 30 !important;
+    margin-bottom: 10px;
+}
+
+.marker {
+    position: absolute;
+    width: 25px;
+    aspect-ratio: 1;
+    background-color: #51BCDA;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2 !important;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px #0002;
+}
+
+.marker::before {
+    content: '';
+    width: 15px;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 2 !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.marker:hover::before,
+.marker.selected::before {
+    background-color: #51BCDA;
+}
+.optionTextContainer{
+    height: 40px;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.optionText{
+    font-size: 14px;
+    color: #454E24;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+    margin: 1px; 
+    z-index: 50;
+    text-align: left;
+    /* border: 1px solid #000; */
+    width: 20%;
+    max-width: 20%;
+    text-wrap: wrap;
+
+}
+.centerRight{
+    text-align: center;
+    margin-left: 5%;
+}
+.centerLeft {
+    text-align: center;
+    margin-right: 5%;
+}
+.right{
+    text-align: right;
+}
+.hr {
+    width: 95%;
+    height: 1.5px;
+    background-color: #454E24;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* /////////////////////////////////// */
+.sliderR {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+
+}
+.percentageContainer{
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+.percentageText{
+    font-size: 14px;
+    color: #454E24;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+    margin: 1px; 
+    z-index: 50;
+    text-align: left;
+    /* border: 1px solid #000; */
+    width: auto;
+    max-width: 20%;
+    text-wrap: nowrap;
+}
+/* Slider CSS */
+.slider-containerR {
+    position: relative;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #000; */
+
+}
+/* Percentage text */
+.movingPercentageTextContainer{
+    width: 100%;
+    height: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+/* border: 1px solid #000; */
+
+}
+.sliderR {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.sliderR::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 45px;
+    aspect-ratio: 1.08;
+    background: url('../imgaes/javitottTriangle.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    position: relative;
+    z-index: 30 !important;
+    margin-bottom: 10px;
+}
+
+.sliderR::-moz-range-thumb {
+    width: 45px;
+    aspect-ratio: 1.08;
+    background: url('../imgaes/javitottTriangle.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    position: relative;
+    z-index: 30 !important;
+    margin-bottom: 10px;
+}
+.movingPercentageText {
+font-size: 14px;
+color: #454E24;
+font-weight: 500;
+font-family: 'Alata-Regular', sans-serif;
+text-align: center;
+margin-top: 0px;
+font-size: 18px;
+width: 40px;
+margin-left: 47%;
+/* border: 1px solid #000; */
+}
+
+/* /////////////////////////////////// */
+.progressBarContainer {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 65%;
+    height: 25px;
+    /* Adjust the z-index if needed to ensure it stays above other content */
+}
+.progressBar{
+    width: 100%;
+    height: 25px;
+    background-color: #fff5;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 1px 1px 1px 1px #0002;
+    border: 0.5px solid #0005;
+
+}
+.progressBarBar{
+    width: 0%;
+    height: 100%;
+    background-color: #51BCDA;
+    transition: width 0.5s ease-in-out;
+}
+/* /////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 1200px) {
+
+    .bigTextKerdoiv{
+        font-size: 28px;
+    }
+
+    .mediumTextKerdoiv {
+        font-size: 18px;
+    }
+    .KerdesTextkerodiv{
+        font-size: 18px;
+    }
+}
+@media (max-width: 1000px) {
+
+.innerContainerRightKerdoiv{
+    top: 20%;
+}
+
+
+}
+
+@media (max-width: 850px) {
+
+.innerContainerLeftKerdoiv {
+    width: 85%;
+}
+.greyContainer{
+    width: 90%;
+
+}
+.progressBarContainer{
+    width: 90%;
+}
+.mediumTextKerdoiv{
+    max-width: 90%;
+    margin-top: 0px;
+}
+.innerContainerRightKerdoiv{
+    right: 15%;
+}
+.questioningManKerdoiv{
+    width: 220px;
+}
+
+}
+
+@media (max-width: 750px) {
+
+    .bigTextKerdoiv {
+        font-size: 24px;
+    }
+
+    .mediumTextKerdoiv {
+        font-size: 16px;
+    }
+    .KerdesTextkerodiv {
+        font-size: 16px;
+    }
+
+
+    .questioningManKerdoiv {
+        width: 190px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .bigTextKerdoiv {
+        font-size: 20px;
+    }
+
+    .mediumTextKerdoiv {
+        font-size: 14px;
+    }
+    .KerdesTextkerodiv{
+        font-size: 14px;
+    }
+
+    .questioningManKerdoiv {
+        width: 160px;
+    }
+    .optionTextContainer{
+        margin-top: 5px;
+        height: 20px;
+    }
+    .optionText{
+        font-size: 12px;
+    }
+    .movingPercentageText{
+        font-size: 12px;
+    }
+    .movingPercentageTextContainer{
+        margin-bottom: 10px;
+    }
+    .hr{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .bigTextKerdoiv {
+        font-size: 18px;
+    }
+
+    .mediumTextKerdoiv {
+        font-size: 12px;
+    }
+    .KerdesTextkerodiv{
+        margin: 5px;
+        font-size: 12px;
+    }
+    .optionText{
+        font-size: 10px;
+    }
+    .movingPercentageText{
+        font-size: 10px;
+    }
+    .questioningManKerdoiv {
+        width: 130px;
+    }
+
+    .hr{
+        margin-top: 15px;
+    }
+    .contentKerdoiv{
+        margin-top: 5px;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .bigTextKerdoiv {
+        font-size: 14px;
+    }
+
+    .mediumTextKerdoiv {
+        max-width: 80%;
+        font-size: 10px;
+    }
+
+    .optionTextContainer{
+        margin-top: 1px;
+    }
+    .hr{
+        margin-top: 10px;
+    }
+    .optionText{
+        font-size: 10px;
+    }
+    .movingPercentageText{
+        font-size: 10px;
+    }
+    .movingPercentageTextContainer{
+        margin-bottom: 5px;
+    }
+    .questioningManKerdoiv {
+        width: 120px;
+    }
+.innerContainerRightKerdoiv{
+    right: 20%;
+}
+.kerdoivKerdesekContainer{
+    margin-top: 0px;
+}
+}
+
+@media (max-width: 350px) {
+
+    .bigTextKerdoiv {
+        font-size: 12px;
+    }
+
+    .mediumTextKerdoiv {
+        max-width: 85%;
+        font-size: 8px;
+    }
+
+    .optionText{
+        font-size: 8px;
+    }
+    .movingPercentageText{
+        font-size: 8px;
+    }
+    .questioningManKerdoiv {
+        width: 120px;
+    }
+
+    .innerContainerRightKerdoiv {
+        right: 20%;
+    }
+    .textContainer{
+        max-width: 70%;
+    }
+    .movingPercentageTextContainer{
+        margin-bottom: 2px;
+    }
+    
 }
