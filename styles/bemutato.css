@@ -54,11 +54,12 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+        transition: transform 0.5s ease;
+        overflow-x: hidden !important;
 }
 .ImageContainer{
     width: 70%;
     height: auto;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,12 +67,14 @@
     box-shadow: 2px 2px 2px 2px #0002;
 }
 .navbarImage{
-    width: 95%;
-    height: 180px;
+    width: 99%;
+    aspect-ratio: 6.285;
     background-image: url('../imgaes/Képernyőfelvétel\ \(570\).png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .arrowButton{
     width: 10%;
@@ -81,9 +84,12 @@
     background-size: contain;
     background-position: center;
 }
+.arrowButton:hover{
+    background-image: url('../imgaes/kimutatsas-magyarazo-ful-haromszog-zold-hower.png');
+}
 
 .explanationbox{
-    width: 20%;
+    width: 250px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -92,22 +98,27 @@
     background-color: #90848475;
     box-shadow: 2px 2px 2px 2px #0002;
     text-align: center;
+        transition: opacity 0.5s ease;
 }
 .chartImage{
-    width: 95%;
-    height: 500px;
+    width: 99%;
+    aspect-ratio: 1.915;
     background-image: url('../imgaes/Képernyőfelvétel\ \(571\).png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .eredmenyImage{
-    width: 95%;
-    height: 200px;
+    width: 99%;
+    aspect-ratio: 5.5;
     background-image: url('../imgaes/Képernyőfelvétel\ \(572\).png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .normalAlacsonyMagasContainer{
@@ -148,8 +159,8 @@
     align-items: center;
 }
 .alsoChartImage{
-    width: 95%;
-    aspect-ratio: 3;
+    width: 99%;
+    aspect-ratio: 2.56;
     background-image: url('../imgaes/erdemny\ bemutató01\ 1.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -214,4 +225,69 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; 
+}
+@media (max-width: 1150px) {
+    .explainingContainer2 {
+        width: 95%;
+        margin-left: 5%;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .ImageContainer {
+        width: 90% !important;
+    }
+
+    .arrowButton {
+        width: 10%;
+    }
+    .explanationbox{
+        display: none;
+    }
+}
+@media (max-width: 1000px) {
+
+    .bigTextBemutato{
+        font-size: 18px;
+    }
+    .mediumTextBemutato{
+        font-size: 14px;
+    }
+}
+@media (max-width: 750px) {
+.explainingContainer2{
+    margin-left: 1%;
+    margin-bottom: 5px;
+
+}
+.explainingContainer1{
+    width: 95%;
+}
+.bigTextBemutato {
+ text-align: center;
+ font-size: 16px;
+ text-wrap: wrap;   
+}
+.mediumTextBemutato {
+    font-size: 12px;
+    text-wrap: wrap;
+}
+}
+@media (max-width: 500px) {
+.greenLineBox{
+    height: 160px;
+}
+.thankYouContainer{
+    width: 80%;
+}
+}
+@media (max-width: 400px) {
+    .greenLineBox {
+        height: 180px;
+    }
+.imageOfRedMan{
+    height: 120px;
+}
+.imageOfGreenMan {
+    height: 120px;
+}
 }

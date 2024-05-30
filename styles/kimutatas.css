@@ -241,6 +241,7 @@
     border-radius: 50px;
     margin-top: 30px;
     margin-bottom: 30px;
+    box-shadow: 2px 2px #0004;
 }
 .rowToColumn{
     height: auto;
@@ -344,6 +345,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    box-shadow: 2px 2px #0004;
 }
 .sajatZold{
  background-color: #acbc73;
@@ -364,6 +366,7 @@
     padding-left: 5px;
     padding-right: 5px;
     cursor: pointer;
+    box-shadow: 2px 2px #0004;
 
 }
 .csoportZold{
@@ -383,6 +386,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    box-shadow: 2px 2px #0004;
 }
 .orszagosZold{
     background-color: #a6bb88;
@@ -409,6 +413,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 0px;
+
     /* border: 1px solid #000; */
 }
 
@@ -420,6 +425,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     border-radius: 20px;
+    box-shadow: 2px 2px #0004;
     /* border: 1px solid #000; */
 }
 .informationGreen{
@@ -726,8 +732,11 @@
 
 }
 @media (max-width: 750px) {
+.chartColumn{
+    aspect-ratio: 5.1388;
+}
 .chartBgImage{
-    background-image: url('../imgaes/kimutatas-uj_hatter_slice_halvanyabb_but_not_mobilverzion.png');
+    background-image: url('../imgaes/kimutatas-uj_hatter_slice_halvanyabb_but_not_mobilverzion\ \(1\).png');
 }
 .rowToColumn{
     flex-direction: column;
@@ -778,6 +787,9 @@ width: 160px;
 }
 .lowMidHighContainer{
     margin-left: 0px;
+}
+.hrKimutatas{
+    height: 2px;
 }
 }
 
