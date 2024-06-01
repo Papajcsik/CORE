@@ -157,7 +157,7 @@
 .slider-container {
     position: relative;
     width: 95%;
-    height: 40px;
+    height: 60px;
     display: flex;
     align-items: center;
     
@@ -178,7 +178,7 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
+    width: 30px;
     aspect-ratio: 1.08;
     background: url('../imgaes/javitottTriangle_halvany.png') no-repeat center center;
     background-size: contain;
@@ -190,7 +190,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]::-moz-range-thumb {
-    width: 25px;
+    width: 30px;
     aspect-ratio: 1.08;
     background: url('../imgaes/javitottTriangle_halvany.png') no-repeat center center;
     background-size: contain;
@@ -376,6 +376,12 @@ margin-left: 47%;
     width: 65%;
     height: 25px;
     /* Adjust the z-index if needed to ensure it stays above other content */
+}
+.sliderR.sliderR::-webkit-slider-thumb{
+    margin-top: 10px;
+}
+.sliderR.sliderR::-moz-range-thumb {
+    margin-top: 10px;
 }
 .progressBar{
     width: 100%;

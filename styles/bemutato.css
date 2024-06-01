@@ -84,9 +84,7 @@
     background-size: contain;
     background-position: center;
 }
-.arrowButton:hover{
-    background-image: url('../imgaes/kimutatsas-magyarazo-ful-haromszog-zold-hower.png');
-}
+
 
 .explanationbox{
     width: 250px;
@@ -228,21 +226,31 @@
 }
 @media (max-width: 1150px) {
     .explainingContainer2 {
-        width: 95%;
-        margin-left: 5%;
+        width: 98%;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: space-evenly;
     }
     .ImageContainer {
-        width: 90% !important;
+        width: 75%;
     }
 
     .arrowButton {
-        width: 10%;
-    }
-    .explanationbox{
         display: none;
     }
+
+}
+@media (max-width: 1050px) {
+        .explainingContainer2 {
+            flex-direction: column;
+        }
+        .ImageContainer{
+            width: 90%;
+            margin-bottom: 10px;
+        }
+        .explanationbox{
+            width: 400px;
+            padding: 10px;
+        }
 }
 @media (max-width: 1000px) {
 
@@ -279,6 +287,20 @@
 .thankYouContainer{
     width: 80%;
 }
+        .explainingContainer2 {
+            width: 98%;
+            margin-left: 0px;
+        }
+        .ImageContainer{
+            width: 100%;
+        }
+        .explanationbox{
+            width: 100%;
+        }
+        .explainingContainer1{
+            width: 95%;
+            margin-left: 0px;
+        }
 }
 @media (max-width: 400px) {
     .greenLineBox {

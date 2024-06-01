@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
             slider.classList.remove('hidden-thumb'); // Show the thumb when the slider is used
             updateProgressBar();  // Update the progress bar
             updateSelectedMarker(slider); // Update selected marker
+            updateThumbMargins(slider); // Update thumb margins
+
         });
 
         const optionTextContainer = document.createElement('div');
@@ -91,6 +93,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const markerCount = 4;
             const sliderWidth = sliderContainer.offsetWidth;
             const markerWidth = 25; // Adjust this if your marker's width changes
+            // const thumb1 = document.querySelector('.sliderR::-webkit-slider-thumb');
+            // const thumb2 = document.querySelector('.sliderR::-moz-range-thumb');
 
             // Remove existing markers
             const existingMarkers = sliderContainer.querySelectorAll('.marker');
@@ -103,14 +107,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 let leftPosition = ((i - 1) / (markerCount - 1)) * (sliderWidth - markerWidth) + (markerWidth / 2);
                 if (i === 1) {
-                    leftPosition += 1.5; // Adjust the first marker
-                } else if (i === markerCount) {
-                    leftPosition -= 1.5; // Adjust the last marker
+                    // thumb1.marginLeft = 2;
+                    // thumb2.marginLeft = 2;
+
+                    leftPosition += 2.5; // Adjust the first marker
+                } else if (i === 2) {
+                    leftPosition += 1; // Adjust the first marker
                 }
+                else if (i === 3) {
+                    leftPosition -= 1.5; // Adjust the first marker
+                }
+                else if (i === 4) {
+                    leftPosition -= 2.5; // Adjust the first marker
+                    // thumb1.marginLeft = -2;
+                    // thumb2.marginLeft =-2;
+                }
+                //  else if (i === markerCount) {
+                //     leftPosition -= 1.5; // Adjust the last marker
+                // }
 
                 marker.style.left = `${leftPosition}px`;
                 marker.dataset.value = i;
                 sliderContainer.appendChild(marker);
+
+                
             }
             updateSelectedMarker(slider); // Update selected marker initially
         });
@@ -244,3 +264,18 @@ window.addEventListener('resize', function() {
 
     // Initialize background
     slider.dispatchEvent(new Event('input'));
+
+
+        function updateThumbMargins(slider) {
+        const value = parseInt(slider.value, 10);
+        if (value === 1) {
+            slider.style.marginRight = '5px';
+            slider.style.marginLeft = '0px';
+        } else if (value === 4) {
+            slider.style.marginLeft = '5px';
+            slider.style.marginRight = '0px';
+        } else {
+            slider.style.marginLeft = '0px';
+            slider.style.marginRight = '0px';
+        }
+    }

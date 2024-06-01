@@ -17,6 +17,7 @@ function toggleVisibilityRed(className, button) {
     element.classList.toggle('hidden');
         if(button.classList.contains('sajatEredmenyGomb')){
             button.classList.toggle('sajatPiros');
+
         }
         if(button.classList.contains('csoportEredmenyGomb')){
             button.classList.toggle('csoportPiros');

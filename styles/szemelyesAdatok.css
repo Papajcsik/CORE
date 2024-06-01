@@ -63,7 +63,7 @@
     margin-top: 75px;
     margin-bottom: 75px;
     z-index: 50;
-    margin-left: 15%;
+    margin-left: 0%;
 }
 .mediumtextSzem{
     font-size: 22px;
@@ -134,11 +134,11 @@
 .custom-select select:focus {
     outline: none;
     border: none;
-    background-image: url('../imgaes/Rectangle\ 30rotated.png');
+    background-image: url('../imgaes/Rectangle_33_zold_down_rotated.png');
 
 }
 .custom-select select:not(:focus) {
-    background-image: url('../imgaes/Rectangle\ 30.png');
+    background-image: url('../imgaes/Rectangle_33_zold_down.png');
     /* Revert to original background image */
 }
 .custom-select option:hover {

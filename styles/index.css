@@ -59,9 +59,10 @@ body{
     width: 100%;
     height: 70px;
     margin-top: 10px;
-    /* background-image: url('../imgaes/rva-hosszuvege.png');
+    /* background-image: url('../imgaes/rva-hosszuvege.png'); */
+    background-image: url('../imgaes/rva-hosszu-nyilkiiro_javitott_nincs_bevillanas.png');
     background-repeat: no-repeat;
-    background-size: auto 100%; */
+    background-size: auto 100%;
         /* Maintain height, adjust width */
     background-position: right;
     display: flex;
@@ -74,12 +75,12 @@ body{
 }
 .div-back-seventyfive{
     height: 100%;
-    width: 75%;
+    width: 100%;
     z-index: 120;
 }
 .div-back-hundred {
     height: 100%;
-    width: 25%;
+    width: 0%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -90,9 +91,9 @@ body{
 .div-mid{
     width: 100%;
     height: 70px;
-    background-image: url('../imgaes/rva-hosszu-nyilkiiro_javitott_nincs_bevillanas.png');
+    /* background-image: url('../imgaes/rva-hosszu-nyilkiiro_javitott_nincs_bevillanas.png'); */
     background-repeat: no-repeat;
-    background-size: auto 100%; /* Maintain height, adjust width */
+    background-size: auto 100%;
     background-position: right;
     display: flex;
     flex-direction: row;
@@ -101,13 +102,13 @@ body{
 }
 .div-mid-fifty{
     height: 100%;
-    width: 50%;
+    width: 25%;
     z-index: 120;
 
 }
 .div-mid-hundred{
     height: 100%;
-    width: 50%;
+    width: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -261,6 +262,7 @@ body{
 }
 .button:hover .buttonImage {
     margin-left: 15px;
+    background-image: url('../imgaes/Rectangle\ 33.png');
 }
 .button:hover .buttonText {
     margin-left: 15px;
@@ -351,6 +353,13 @@ body{
     .containerLeft {
         width: 25%;
     }
+    .div-mid-fifty {
+        width: 30%;
+    }
+    .div-mid-hundred{
+        width: 70%;
+    }
+
 }
 /* Media query for screens below 1000 pixels */
 @media (max-width: 1000px) {
@@ -365,6 +374,12 @@ body{
     }
     .button {
         height: 40px;
+    }
+    .div-mid-fifty {
+        width: 35%;
+    }
+    .div-mid-hundred{
+        width: 65%;
     }
 }
 @media (max-width: 850px) {
