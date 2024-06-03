@@ -1,6 +1,8 @@
-function toggleVisibilityGreen(className, button) {
-    const element = document.querySelector(`.${className}`);
-    element.classList.toggle('hidden');
+function toggleVisibilityGreen(className, chartSet, button) {
+    const element = document.querySelectorAll(`.chartImage${chartSet}`);
+    element.forEach(chart => {
+        chart.classList.toggle('hidden');
+    });
         if(button.classList.contains('sajatEredmenyGomb')){
             button.classList.toggle('sajatZold');
         }
@@ -12,9 +14,28 @@ function toggleVisibilityGreen(className, button) {
         }
     adjustHeights1();
 }
-function toggleVisibilityRed(className, button) {
-    const element = document.querySelector(`.${className}`);
-    element.classList.toggle('hidden');
+function toggleVisibilityGreen(className, chartSet, button) {
+    const element = document.querySelectorAll(`.chartImage${chartSet}`);
+    element.forEach(chart => {
+        chart.classList.toggle('hidden');
+    });
+        if(button.classList.contains('sajatEredmenyGomb')){
+            button.classList.toggle('sajatZold');
+
+        }
+        if(button.classList.contains('csoportEredmenyGomb')){
+            button.classList.toggle('csoportZold');
+        }
+        if(button.classList.contains('OrszagosAtlagGomb')){
+            button.classList.toggle('orszagosZold');
+        }
+    adjustHeights2();
+}
+function toggleVisibilityRed(className, chartSet, button) {
+    const element = document.querySelectorAll(`.chartImage${chartSet}`);
+    element.forEach(chart => {
+        chart.classList.toggle('hidden');
+    });
         if(button.classList.contains('sajatEredmenyGomb')){
             button.classList.toggle('sajatPiros');
 
@@ -111,3 +132,68 @@ function showContent(contentId, button) {
 window.onload = function() {
     showContent('content1', document.querySelectorAll('.kimutatasNavButtonContainer')[1]); // Show the first content section by default
 };
+
+//hover chartImage
+document.addEventListener('DOMContentLoaded', () => {
+    const chartImages = document.querySelectorAll('.chartImage');
+    const tooltip = document.getElementById('tooltip');
+    const marginLeft = 10; // Minimum left margin to keep the tooltip on the screen
+
+    chartImages.forEach(chartImage => {
+        // Function to update tooltip position
+        const updateTooltipPosition = (pageX, pageY) => {
+            let tooltipX = pageX - 85; // Offset to avoid overlapping the cursor/touch point
+            const tooltipY = pageY - 75; // Offset to avoid overlapping the cursor/touch point
+
+            // Prevent tooltip from going off the left side of the screen
+            if (tooltipX < marginLeft) {
+                tooltipX = marginLeft;
+            }
+
+            tooltip.style.left = `${tooltipX}px`;
+            tooltip.style.top = `${tooltipY}px`;
+        };
+
+        // Mouse events
+        chartImage.addEventListener('mouseover', (event) => {
+            const containerWidth = chartImage.parentElement.offsetWidth;
+            const imageWidth = parseFloat(window.getComputedStyle(chartImage).width);
+            const widthPercentage = (imageWidth / containerWidth) * 100;
+            tooltip.textContent = `Érték: ${widthPercentage.toFixed(0)}%`;
+            tooltip.style.display = 'block';
+        });
+
+        chartImage.addEventListener('mouseout', () => {
+            tooltip.style.display = 'none';
+        });
+
+        chartImage.addEventListener('mousemove', (event) => {
+            updateTooltipPosition(event.pageX, event.pageY);
+        });
+
+        // Touch events
+        chartImage.addEventListener('touchstart', (event) => {
+            const touch = event.touches[0];
+            const containerWidth = chartImage.parentElement.offsetWidth;
+            const imageWidth = parseFloat(window.getComputedStyle(chartImage).width);
+            const widthPercentage = (imageWidth / containerWidth) * 100;
+            tooltip.textContent = `Érték: ${widthPercentage.toFixed(0)}%`;
+            tooltip.style.display = 'block';
+            updateTooltipPosition(touch.pageX, touch.pageY);
+        });
+
+        chartImage.addEventListener('touchmove', (event) => {
+            const touch = event.touches[0];
+            updateTooltipPosition(touch.pageX, touch.pageY);
+        });
+
+        chartImage.addEventListener('touchend', () => {
+            tooltip.style.display = 'none';
+        });
+    });
+});
+
+
+
+
+

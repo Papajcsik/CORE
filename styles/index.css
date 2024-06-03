@@ -110,7 +110,7 @@ body{
     height: 100%;
     width: 75%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     z-index: 120;
 }
@@ -170,19 +170,47 @@ body{
         -1px 1px 0 #293E07,
         1px 1px 0 #293E07; /* Simulates an outside stroke */
     z-index: 120;
+    width: 70%;
+    text-align: center;
     
 }
-.placeholderLogo{
-    height: 85%;
-    width: auto;
-    aspect-ratio: 1.27;
-    /* background-image: url('../imgaes/Rectangle\ 16.png');
+.languageSelectorContainer{
+    height: 100%;
+    width: 12%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.en, .hu{
+    width: 45%;
+    aspect-ratio: 0.87;
+    background-image: url('../imgaes/englangselect-02.png');
     background-repeat: no-repeat;
     background-size: auto 100%;
-    background-position: center; */
+    background-position: center;
+    cursor: pointer;
+}
+.hu{
+    background-image: url('../imgaes/hunlangselect-02.png');
+}
+.en.active{
+    background-image: url('../imgaes/englangselect-01.png');
+}
+.hu.active {
+    background-image: url('../imgaes/hunlangselect-01.png');
+}
+.placeholderLogo{
+    /* height: 85%;
+    width: auto;
+    aspect-ratio: 1.27;
+    background-image: url('../imgaes/Rectangle\ 16.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
     margin-left: 5px;
     margin-right: 5px;
-    z-index: 120;
+    z-index: 120; */
 }
 
 .contentContainer{
@@ -399,7 +427,9 @@ body{
         flex-direction: column;
         padding-top: 30px;
     }
-
+.languageSelectorContainer{
+    width: 20%;
+}
     .containerLeft {
         width: 30%;
 
@@ -491,6 +521,10 @@ body{
 
         margin-top: -23%;
     }
+    .languageSelectorContainer {
+        width: 25%;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -501,7 +535,11 @@ body{
     .headerText{
         font-size: 16px;
         -webkit-text-stroke: 0.3px #000;
-        margin-right: 25%;
+        width: 65%;
+        /* margin-right: 25%; */
+    }
+    .languageSelectorContainer {
+        width: 35%;
     }
     .contentContainer{
         padding-top: 20px;

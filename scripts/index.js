@@ -8,3 +8,14 @@
             });
         });
     });
+
+function toggleLanguage(lang) {
+    if (lang === 'en') {
+        document.querySelector('.en').classList.add('active');
+        document.querySelector('.hu').classList.remove('active');
+    } else if (lang === 'hu') {
+        document.querySelector('.hu').classList.add('active');
+        document.querySelector('.en').classList.remove('active');
+    }
+}
+

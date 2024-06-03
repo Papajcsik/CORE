@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/kimutatas.css" />
     <link rel="icon" type="image/x-icon" href="../imgaes/LOGO_javitott.png">
+                <link rel="stylesheet" href="./darkMode.css" />
     <title>C.O.R.E. Kimutatás</title>
 </head>
 
@@ -19,16 +20,16 @@
             <div class="div-mid">
                 <div class="div-mid-fifty">
                     <div class="div-front">
-                        <div class="logo"><a href="../index.html" class="logoHref"></a></div>
+                        <div class="logo"><a href="./index.html" class="logoHref"></a></div>
                         <text class="logoText">C.O.R.E.</text>
                     </div>
                 </div>
                 <div class="div-mid-hundred">
                     <text class="headerText">Kimutatás</text>
-                        <div class="languageSelectorContainer">
-                            <div class="en active" onclick="toggleLanguage('en')"></div>
-                            <div class="hu" onclick="toggleLanguage('hu')"></div>
-                        </div>
+                    <div class="languageSelectorContainer">
+                        <div class="en active" onclick="toggleLanguage('en')"></div>
+                        <div class="hu" onclick="toggleLanguage('hu')"></div>
+                    </div>
                 </div>
 
 
@@ -186,131 +187,146 @@
                     </div>
                     <div class="vr">
                     </div>
-                        <div class="summaryTextContainer">
-                            <div class="summarytext">
-                                Kiváló érték
-                            </div>
-                            <div class="summarytextInner">
-                                <div class="summarytext">
-                                    Eredményed: 89,56
-                                </div>
-                                <div class="summarytext">
-                                    Normál tartomány: 44.3 - 68.3
-                                </div>
-                            </div>
-
+                    <div class="summaryTextContainer">
+                        <div class="summarytext">
+                            Kiváló érték
                         </div>
+                        <div class="summarytextInner">
+                            <div class="summarytext">
+                                Eredményed: 89,56
+                            </div>
+                            <div class="summarytext">
+                                Normál tartomány: 44.3 - 68.3
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
-                    <div class="moreText">
-                            A kontroll azt jelenti, hogy képes vagy a munkahelyi körülményeidet bizonyos mértékig befolyásolni, vannak olyan munkát
-                            érintő tényezők, melyekre ráhatásod van. Ilyen lehet például, hogy az elvégzendő feladatok sorrendjét magad határozhatod
-                            meg. Ha rendelkezel bizonyos mértékű hatáskörrel a mindennapi munkavégzésed felett, akkor valószínűleg elégedettebb vagy
-                            a munkahelyeddel, és a kiégés veszélye is kevésbé fenyeget. Ebben a dimenzióban összességében átlagos pontértéket értél
-                            el (lásd: 1. oszlop), ami számodra fontos stresszcsökkentő tényező, mert képes vagy a magas munkahelyi követelmények
-                            által keltett stresszt kezelni, így a krónikus stressz kialakulásának kockázata alacsony nálad.
-                            Érdemes az egyes összetevőket (munkakörülmények, fejlődési lehetőség, szaktudásnak megfelelő munkakör, értelmes és
-                            értékes munkavégzés, döntés és felelősség, megfelelő információk) bemutató oszlopok értékeit önállóan is megvizsgálnod.
-                            Ha az összesített átlagos szint ellenére vannak kiugróan alacsony értékeid, miért érzed alacsonynak a ráhatásodat ezeken
-                            a területeken? Az alacsony pontszámú területek tudatos fejlesztésével a benned keletkező munkahelyi stressz mértéke
-                            csökkenthető.
-                    </div>
+                <div class="moreText">
+                    A kontroll azt jelenti, hogy képes vagy a munkahelyi körülményeidet bizonyos mértékig befolyásolni,
+                    vannak olyan munkát
+                    érintő tényezők, melyekre ráhatásod van. Ilyen lehet például, hogy az elvégzendő feladatok
+                    sorrendjét magad határozhatod
+                    meg. Ha rendelkezel bizonyos mértékű hatáskörrel a mindennapi munkavégzésed felett, akkor
+                    valószínűleg elégedettebb vagy
+                    a munkahelyeddel, és a kiégés veszélye is kevésbé fenyeget. Ebben a dimenzióban összességében
+                    átlagos pontértéket értél
+                    el (lásd: 1. oszlop), ami számodra fontos stresszcsökkentő tényező, mert képes vagy a magas
+                    munkahelyi követelmények
+                    által keltett stresszt kezelni, így a krónikus stressz kialakulásának kockázata alacsony nálad.
+                    Érdemes az egyes összetevőket (munkakörülmények, fejlődési lehetőség, szaktudásnak megfelelő
+                    munkakör, értelmes és
+                    értékes munkavégzés, döntés és felelősség, megfelelő információk) bemutató oszlopok értékeit
+                    önállóan is megvizsgálnod.
+                    Ha az összesített átlagos szint ellenére vannak kiugróan alacsony értékeid, miért érzed alacsonynak
+                    a ráhatásodat ezeken
+                    a területeken? Az alacsony pontszámú területek tudatos fejlesztésével a benned keletkező munkahelyi
+                    stressz mértéke
+                    csökkenthető.
+                </div>
 
             </div>
 
             <div class="selectModesContainer">
-                <div class="sajatEredmenyGomb sajatZold" onclick="toggleVisibilityGreen('chartImage1', 1, this)"><div class="selectorButtonText greenText">Eredményed</div></div>
-                <div class="csoportEredmenyGomb csoportZold" onclick="toggleVisibilityGreen('chartImage2', 2, this)"><div class="selectorButtonText greenText">Csoporteredmény</div></div>
-                <div class="OrszagosAtlagGomb orszagosZold" onclick="toggleVisibilityGreen('chartImage3', 3, this)"><div class="selectorButtonText greenText">Országos Átlag</div></div>
+                <div class="sajatEredmenyGomb sajatZold" onclick="toggleVisibilityGreen('chartImage1', 1, this)">
+                    <div class="selectorButtonText greenText">Eredményed</div>
+                </div>
+                <div class="csoportEredmenyGomb csoportZold" onclick="toggleVisibilityGreen('chartImage2', 2, this)">
+                    <div class="selectorButtonText greenText">Csoporteredmény</div>
+                </div>
+                <div class="OrszagosAtlagGomb orszagosZold" onclick="toggleVisibilityGreen('chartImage3', 3, this)">
+                    <div class="selectorButtonText greenText">Országos Átlag</div>
+                </div>
             </div>
 
-<!-- Chart 1 -->
-<div class="chartSectionContainer">
-    <div class="informationColumn informationGreen">
-        <div class="informationColumnInner">
-            <div class="informationText greenText">Legjobb vagy</div>
-            <div class="hrKimutatas greenHr"></div>
-        </div>
-        <div class="rightLine greenLine"></div>
-    </div>
-    <div class="chartColumn">
-        <div class="chartBgImage">
-            <div class="chartRow1">
-                <div class="chartImage chartImage1"></div>
-                <div class="chartImage chartImage2"></div>
-                <div class="chartImage chartImage3"></div>
+            <!-- Chart 1 -->
+            <div class="chartSectionContainer">
+                <div class="informationColumn informationGreen">
+                    <div class="informationColumnInner">
+                        <div class="informationText greenText">Legjobb vagy</div>
+                        <div class="hrKimutatas greenHr"></div>
+                    </div>
+                    <div class="rightLine greenLine"></div>
+                </div>
+                <div class="chartColumn">
+                    <div class="chartBgImage">
+                        <div class="chartRow1">
+                            <div class="chartImage chartImage1"></div>
+                            <div class="chartImage chartImage2"></div>
+                            <div class="chartImage chartImage3"></div>
+                        </div>
+                    </div>
+                    <div class="greyBox">
+                        <div class="darkGreyBox"></div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="greyBox">
-            <div class="darkGreyBox"></div>
-        </div>
-    </div>
-</div>
-<!-- Chart 1 -->
-<div class="chartSectionContainer">
-    <div class="informationColumn informationGreen">
-        <div class="informationColumnInner">
-            <div class="informationText greenText">Legjobb vagy</div>
-            <div class="hrKimutatas greenHr"></div>
-        </div>
-        <div class="rightLine greenLine"></div>
-    </div>
-    <div class="chartColumn">
-        <div class="chartBgImage">
-            <div class="chartRow1">
-                <div class="chartImage chartImage1"></div>
-                <div class="chartImage chartImage2"></div>
-                <div class="chartImage chartImage3"></div>
+            <!-- Chart 1 -->
+            <div class="chartSectionContainer">
+                <div class="informationColumn informationGreen">
+                    <div class="informationColumnInner">
+                        <div class="informationText greenText">Legjobb vagy</div>
+                        <div class="hrKimutatas greenHr"></div>
+                    </div>
+                    <div class="rightLine greenLine"></div>
+                </div>
+                <div class="chartColumn">
+                    <div class="chartBgImage">
+                        <div class="chartRow1">
+                            <div class="chartImage chartImage1"></div>
+                            <div class="chartImage chartImage2"></div>
+                            <div class="chartImage chartImage3"></div>
+                        </div>
+                    </div>
+                    <div class="greyBox">
+                        <div class="darkGreyBox"></div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="greyBox">
-            <div class="darkGreyBox"></div>
-        </div>
-    </div>
-</div>
-<div class="tooltip" id="tooltip">Tooltip</div>
+            <div class="tooltip" id="tooltip">Tooltip</div>
 
-<!-- Szazalekos szamok -->
-<div class="chartSectionContainerNumbers">
-    <div class="informationColumnBlank">
+            <!-- Szazalekos szamok -->
+            <div class="chartSectionContainerNumbers">
+                <div class="informationColumnBlank">
 
-    </div>
-    <div class="numberColumn">
-        <div class="PercentageNumber zero">
-            0%
-        </div>
-        <div class="PercentageNumber">
-            10%
-        </div>
-        <div class="PercentageNumber">
-            20%
-        </div>
-        <div class="PercentageNumber">
-            30%
-        </div>
-        <div class="PercentageNumber">
-            40%
-        </div>
-        <div class="PercentageNumber">
-            50%
-        </div>
-        <div class="PercentageNumber">
-            60%
-        </div>
-        <div class="PercentageNumber">
-            70%
-        </div>
-        <div class="PercentageNumber">
-            80%
-        </div>
-        <div class="PercentageNumber">
-            90%
-        </div>
-        <div class="PercentageNumber hundred">
-            100%
-        </div>
-    </div>
-</div>
+                </div>
+                <div class="numberColumn">
+                    <div class="PercentageNumber zero whiteText">
+                        0%
+                    </div>
+                    <div class="PercentageNumber whiteText">
+                        10%
+                    </div>
+                    <div class="PercentageNumber whiteText">
+                        20%
+                    </div>
+                    <div class="PercentageNumber whiteText">
+                        30%
+                    </div>
+                    <div class="PercentageNumber whiteText">
+                        40%
+                    </div>
+                    <div class="PercentageNumber whiteText">
+                        50%
+                    </div>
+                    <div class="PercentageNumber whiteText">
+                        60%
+                    </div>
+                    <div class="PercentageNumber whiteText">
+                        70%
+                    </div>
+                    <div class="PercentageNumber whiteText">
+                        80%
+                    </div>
+                    <div class="PercentageNumber whiteText">
+                        90%
+                    </div>
+                    <div class="PercentageNumber hundred whiteText">
+                        100%
+                    </div>
+                </div>
+            </div>
 
 
             <!-- Chart 2 -->
@@ -349,23 +365,23 @@
                     <div class="lowMidHighText">Magas</div>
                 </div>
             </div>
-            
+
             <div class="nextButtonContainer">
-                    <!-- Button -->
-                    <div class="button">
-                        <text class="buttonTextIndex">Tovább</text>
-                        <div class="buttonImage"></div>
-                    </div>
+                <!-- Button -->
+                <div class="button">
+                    <text class="buttonTextIndex">Tovább</text>
+                    <div class="buttonImage"></div>
+                </div>
             </div>
         </div>
         <!-- Content01 end -->
 
         <!-- Content02 start -->
         <div class="InnerContentContainer" id="content2">
-        
+
             <!-- bigtextContainer -->
             <div class="bigtextContainer informationRed">
-        
+
                 <div class="rowToColumn">
                     <div class="imageOfDepressedMan">
                     </div>
@@ -383,35 +399,44 @@
                                 Normál tartomány: 44.3 - 68.3
                             </div>
                         </div>
-        
+
                     </div>
                 </div>
-        
+
                 <div class="moreText redText">
-                    A kontroll azt jelenti, hogy képes vagy a munkahelyi körülményeidet bizonyos mértékig befolyásolni, vannak
+                    A kontroll azt jelenti, hogy képes vagy a munkahelyi körülményeidet bizonyos mértékig befolyásolni,
+                    vannak
                     olyan munkát
-                    érintő tényezők, melyekre ráhatásod van. Ilyen lehet például, hogy az elvégzendő feladatok sorrendjét magad
+                    érintő tényezők, melyekre ráhatásod van. Ilyen lehet például, hogy az elvégzendő feladatok
+                    sorrendjét magad
                     határozhatod
-                    meg. Ha rendelkezel bizonyos mértékű hatáskörrel a mindennapi munkavégzésed felett, akkor valószínűleg
+                    meg. Ha rendelkezel bizonyos mértékű hatáskörrel a mindennapi munkavégzésed felett, akkor
+                    valószínűleg
                     elégedettebb vagy
-                    a munkahelyeddel, és a kiégés veszélye is kevésbé fenyeget. Ebben a dimenzióban összességében átlagos
+                    a munkahelyeddel, és a kiégés veszélye is kevésbé fenyeget. Ebben a dimenzióban összességében
+                    átlagos
                     pontértéket értél
-                    el (lásd: 1. oszlop), ami számodra fontos stresszcsökkentő tényező, mert képes vagy a magas munkahelyi
+                    el (lásd: 1. oszlop), ami számodra fontos stresszcsökkentő tényező, mert képes vagy a magas
+                    munkahelyi
                     követelmények
                     által keltett stresszt kezelni, így a krónikus stressz kialakulásának kockázata alacsony nálad.
-                    Érdemes az egyes összetevőket (munkakörülmények, fejlődési lehetőség, szaktudásnak megfelelő munkakör,
+                    Érdemes az egyes összetevőket (munkakörülmények, fejlődési lehetőség, szaktudásnak megfelelő
+                    munkakör,
                     értelmes és
-                    értékes munkavégzés, döntés és felelősség, megfelelő információk) bemutató oszlopok értékeit önállóan is
+                    értékes munkavégzés, döntés és felelősség, megfelelő információk) bemutató oszlopok értékeit
+                    önállóan is
                     megvizsgálnod.
-                    Ha az összesített átlagos szint ellenére vannak kiugróan alacsony értékeid, miért érzed alacsonynak a
+                    Ha az összesített átlagos szint ellenére vannak kiugróan alacsony értékeid, miért érzed alacsonynak
+                    a
                     ráhatásodat ezeken
-                    a területeken? Az alacsony pontszámú területek tudatos fejlesztésével a benned keletkező munkahelyi stressz
+                    a területeken? Az alacsony pontszámú területek tudatos fejlesztésével a benned keletkező munkahelyi
+                    stressz
                     mértéke
                     csökkenthető.
                 </div>
-        
+
             </div>
-        
+
             <div class="selectModesContainer">
                 <div class="sajatEredmenyGomb sajatPiros" onclick="toggleVisibilityRed('chartImage4', 4, this)">
                     <div class="selectorButtonText redText">Eredményed</div>
@@ -423,7 +448,7 @@
                     <div class="selectorButtonText redText">Országos Átlag</div>
                 </div>
             </div>
-        
+
             <!-- Chart 1 -->
             <div class="chartSectionContainer">
                 <div class="informationColumn informationRed">
@@ -469,50 +494,50 @@
                 </div>
             </div>
             <div class="tooltip" id="tooltip">Tooltip</div>
-        
+
             <!-- Szazalekos szamok -->
             <div class="chartSectionContainerNumbers">
                 <div class="informationColumnBlank">
-        
+            
                 </div>
                 <div class="numberColumn">
-                    <div class="PercentageNumber zero">
+                    <div class="PercentageNumber zero whiteText">
                         0%
                     </div>
-                    <div class="PercentageNumber">
+                    <div class="PercentageNumber whiteText">
                         10%
                     </div>
-                    <div class="PercentageNumber">
+                    <div class="PercentageNumber whiteText">
                         20%
                     </div>
-                    <div class="PercentageNumber">
+                    <div class="PercentageNumber whiteText">
                         30%
                     </div>
-                    <div class="PercentageNumber">
+                    <div class="PercentageNumber whiteText">
                         40%
                     </div>
-                    <div class="PercentageNumber">
+                    <div class="PercentageNumber whiteText">
                         50%
                     </div>
-                    <div class="PercentageNumber">
+                    <div class="PercentageNumber whiteText">
                         60%
                     </div>
-                    <div class="PercentageNumber">
+                    <div class="PercentageNumber whiteText">
                         70%
                     </div>
-                    <div class="PercentageNumber">
+                    <div class="PercentageNumber whiteText">
                         80%
                     </div>
-                    <div class="PercentageNumber">
+                    <div class="PercentageNumber whiteText">
                         90%
                     </div>
-                    <div class="PercentageNumber hundred">
+                    <div class="PercentageNumber hundred whiteText">
                         100%
                     </div>
                 </div>
             </div>
-        
-        
+
+
             <!-- Chart 2 -->
             <!-- <div class="chartSectionContainer">
                         <div class="informationColumn informationRed">
@@ -537,7 +562,7 @@
                     
                         </div>
                     </div> -->
-        
+
             <div class="lowMidHighContainer">
                 <div class="low">
                     <div class="lowMidHighText">Alacsony</div>
@@ -549,7 +574,7 @@
                     <div class="lowMidHighText">Magas</div>
                 </div>
             </div>
-        
+
             <div class="nextButtonContainer">
                 <!-- Button -->
                 <div class="button">
@@ -560,7 +585,7 @@
         </div>
         <!-- Content01 end -->
 
- 
+
 
     </div>
     <script src="../scripts/index.js"></script>

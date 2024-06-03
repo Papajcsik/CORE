@@ -12,9 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // { id: 10, text: "Harmadik kérdés?", answer: 0, initialAnswer: 0 },
     ];
 
-
+    const darkMode = true; //turn dark mode on and off
 
     const questionList = document.getElementById('question-list');
+    const questionListDark = document.getElementById('question-list');
     const progressBar = document.querySelector('.progressBarBar');
 
     // Function to update progress bar
@@ -34,6 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const questionText = document.createElement('div');
         questionText.className = 'KerdesTextkerodiv';
+        if(darkMode){
+        questionText.className = 'KerdesTextkerodiv whiteText';
+        }
         questionText.textContent = `${question.id}. ${question.text}`;
 
         const sliderContainer = document.createElement('div');
@@ -66,6 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
         options.forEach((optionText, index) => {
             const option = document.createElement('div');
             option.className = 'optionText';
+        if(darkMode){
+            option.className = 'optionText whiteText';
+        }
             if (index === 1) option.classList.add('centerLeft');
             if (index === 2) option.classList.add('centerRight');
             if (index === 3) option.classList.add('right');

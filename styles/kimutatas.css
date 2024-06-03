@@ -25,6 +25,9 @@
     flex-wrap: wrap;
     transition: flex-wrap 0.3s ease-in-out;
     transition: height 0.8s ease-in-out;
+        overflow: hidden; /* Prevent overflow on hover */
+    padding: 0 36px; /* Add padding to the left and right */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
     /* border: 1px solid #000; */
 }
 .kimutatasNavButtonContainer{
@@ -153,8 +156,9 @@
 }
 /* //////////////////////////////// */
 .kimutatasButtonTextContainer:hover+.badArrowImage {
+    width: auto;
     background-image: url('../imgaes/core-header-gomb-kimutato-.bad12.png') !important;
-    /* margin-left: -3px !important; */
+    margin-left: -3px !important;
 }
 
 .badArrowImage:hover {
@@ -167,6 +171,7 @@
 }
 /* ///////////// */
 .kimutatasButtonTextContainer:hover+.bevezetuArrowImage {
+    width: auto;
     background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto12.png') !important;
     margin-left: -3px !important;
 }
@@ -182,6 +187,7 @@
 /* ///////////// */
 
 .kimutatasButtonTextContainer:hover+.neutralArrowImage {
+    width: auto;
     background-image: url('../imgaes/core-header-gomb-kimutatosemleges12.png') !important;
     margin-left: -3px !important;
 }
@@ -195,6 +201,7 @@
 }
 /* /////////////////// */
 .kimutatasButtonTextContainer:hover+.goodArrowImage  {
+    width: auto;
     background-image: url('../imgaes/core-header-gomb-kimutatogood012.png') !important;
     margin-left: -3px !important;
 }
@@ -559,29 +566,7 @@
     z-index: 10;
 }
 
-.chartRow2 {
-    width: 99.7%;
-    height: 90%;
-    margin-left: 0.3%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: 5.2%;
-    border: 1px solid #000;
-}
 
-.chartRow3 {
-    width: 99.7%;
-    height: 90%;
-    margin-left: 0.3%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    margin-top: 5.1%;
-    border: 1px solid #000;
-}
 .chartImage1,
 .chartImage2,
 .chartImage3,
@@ -629,6 +614,74 @@
     width: 0 !important;
     height: 0 !important;
 }
+.chartSectionContainerNumbers{
+    width: 98%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+.informationColumnBlank {
+    width: 23%;
+    height: 10px;
+    /* border: 1px solid #000; */
+}
+.numberColumn {
+    width: 75%;
+    height: auto;
+    aspect-ratio: 36;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* background-color: #fff; */
+    /* border: 1px solid #000; */
+}
+.PercentageNumber{
+    width: 9%;
+    font-size: 1.5vw;
+    color: #454E24;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+    text-align: center;
+    z-index: 50;
+    /* border: 1px solid #000; */
+}
+
+
+.tooltip {
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 12px;
+    display: none;
+    white-space: nowrap;
+    z-index: 1000;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+    margin: 25px;
+    /* pointer-events: none; */
+        /* Ensures the tooltip doesn't interfere with mouse events */
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
 .nextButtonContainer{
     width: 100%;
     height: auto;
@@ -799,6 +852,16 @@ width: 160px;
 .hrKimutatas{
     height: 2px;
 }
+.kimutatasNavbarContainer{
+        padding: 0 12px;
+
+}
+.informationColumnBlank{
+    display: none;
+}
+.numberColumn{
+    width: 100%;
+}
 }
 
 @media (max-width: 600px) {
@@ -871,7 +934,23 @@ width: 160px;
 .selectorButtonText{
     font-size: 12px;
 }
-
+.chartSectionContainerNumbers{
+    width: 100%;
+}
+.numberColumn{
+    justify-content: center;
+}
+.hundred, .zero{
+    display: none;
+}
+.PercentageNumber{
+    margin-left: 0.35%;
+    margin-right: 0.35%;
+    font-size: 2.5vw;
+}
+.tooltip{
+    font-size: 12px;
+}
 }
 @media (max-width: 500px) {
 .kimutatasNavButtonContainer{
@@ -884,7 +963,10 @@ width: 160px;
 .kimutatasButtonArrowContainer{
     margin-left: -25px;
 }
+.kimutatasNavbarContainer {
+    padding: 0 6px;
 
+}
 }
 @media (max-width: 450px) {
     .kimutatasNavButtonContainer {
@@ -930,5 +1012,12 @@ width: 160px;
 }
 .summarytext {
     max-width: 95%;
+}
+.tooltip {
+    font-size: 10px;
+}
+.kimutatasNavbarContainer{
+    justify-content: flex-start;
+    width: 95%;
 }
 }

@@ -55,7 +55,7 @@
  background-image: url('../imgaes/kimutatsas-magyarazo-ful-haromszog_rotated.png');   
 }
 .kiertekelesButtonText{
-    font-size: 20px;
+    font-size: 2vw;
     font-weight: 500;
     color: #454E24;
     font-family: 'Alata-Regular', sans-serif;
@@ -74,6 +74,7 @@
 .dropDownColumn{
     height: 250px;
     width: 30%;
+    min-width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -84,4 +85,23 @@
     height: 5px;
     border-radius: 10px;
     background-color: #90DAC8;
+}
+.selectOverride{
+    width: 80%;
+    min-width: 210px;
+}
+@media (max-width: 750px) {
+.mainNavContainer{
+    height: 70px;
+}
+}
+@media (max-width: 550px) {
+.mainNavContainer{
+    flex-direction: column;
+    height: auto;
+}
+.selectOverride{
+    width: 80%;
+}
+
 }
