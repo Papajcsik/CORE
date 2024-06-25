@@ -16,7 +16,7 @@
     /* border: 1px solid #000; */
 }
 .kimutatasNavbarContainer{
-    width: 90%;
+    /* width: 90%; */
     height: auto;
     display: flex;
     flex-direction: row;
@@ -39,6 +39,7 @@
     align-items: flex-start;
     flex-wrap: nowrap;
     margin: 1px;
+    transition: scale 0.3s ease-in-out;
     /* border: 1px solid #000; */
 }
 .kimutatasButtonTextContainer{
@@ -57,18 +58,6 @@
     transition: background-image 0.3s ease-in-out, margin-left 0.3s ease-in-out;
     margin-top: 1px;
     cursor: pointer;
-}
-.bevezetoContainer{
-    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto01.png');
-}
-.neutralContainer{
-    background-image: url('../imgaes//core-header-gomb-kimutatosemleges01.png');
-}
-.goodContainer {
-    background-image: url('../imgaes//core-header-gomb-kimutatogood01.png');
-}
-.badContainer {
-    background-image: url('../imgaes/core-header-gomb-kimutato-.bad01.png');
 }
 .neutralMan{
     height: 100%;
@@ -110,6 +99,7 @@
     padding-top: 2px;
     padding-left: 3px;
     padding-right: 3px;
+    transition: color 0.3s ease-in-out;
 }
 .greenButtonStroke{
     -webkit-text-stroke: 0.2px #293E07; /* Adds the stroke */
@@ -140,80 +130,162 @@
     margin-left: -35px;
     transition: background-image 0.3s ease-in-out, margin-left 0.3s ease-in-out;
 }
+/* .kimutatasNavButtonContainer:hover{
+    scale: 1.02;
+} */
 /* ////////// */
-.bevezetuArrowImage{
+.bevezetoArrowImage {
     background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto11.png');
-
 }
+.bevezetoContainer {
+    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto01.png');
+}
+.bevezetoArrowImage.active {
+    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto12aktiv.png');
+}
+.bevezetoContainer.active {
+    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto01aktiv.png');
+}
+.bevezetoContainer.active .buttonText{
+    color: #0C594B;
+}
+.bevezetoContainer.active .greenButtonStroke {
+        -webkit-text-stroke: 0px #293E07;
+        text-shadow:
+            0px 0px 0 #293E07,
+            0px 0px 0 #293E07,
+            0px 0px 0 #293E07,
+            0px 0px 0 #293E07;
+}
+/* .bevezetoArrowImage:hover {
+    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto12.png');
+}
+.bevezetoContainer:hover {
+    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto01.png');
+}
+.kimutatasButtonTextContainer:hover+.bevezetoArrowImage {
+    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto12.png');
+}
+.bevezetoArrowImage:hover~.bevezetoContainer {
+    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto01aktiv.png') ;
+} */
+
+
+/* ////////////////////////////// */
 .neutralArrowImage{
     background-image: url('../imgaes/core-header-gomb-kimutatosemleges11.png');
 }
+.neutralContainer {
+    background-image: url('../imgaes/core-header-gomb-kimutatosemleges01.png');
+}
+.neutralArrowImage.active {
+    background-image: url('../imgaes/core-header-gomb-kimutatosemleges12aktiv.png') ;
+}
+.neutralContainer.active{
+    background-image: url('../imgaes/core-header-gomb-kimutatosemleges01aktiv.png') ;
+}
+.neutralContainer.active .buttonText {
+    color: #0C594B;
+}
+.neutralContainer.active .greenButtonStroke {
+    -webkit-text-stroke: 0px #293E07;
+    text-shadow:
+        0px 0px 0 #293E07,
+        0px 0px 0 #293E07,
+        0px 0px 0 #293E07,
+        0px 0px 0 #293E07;
+}
+/* .neutralArrowImage:hover {
+    background-image: url('../imgaes/core-header-gomb-kimutatosemleges12.png') ;
+}
+.neutralContainer:hover {
+    background-image: url('../imgaes/core-header-gomb-kimutatosemleges01.png') ;
+}
+.kimutatasButtonTextContainer:hover+.neutralArrowImage {
+    background-image: url('../imgaes/core-header-gomb-kimutatosemleges12.png') ;
+}
+.neutralArrowImage:hover~.neutralContainer {
+    background-image: url('../imgaes/core-header-gomb-kimutatosemleges01.png') ;
+} */
+
+/* ///////////////////////////////// */
 .goodArrowImage{
     background-image: url('../imgaes/core-header-gomb-kimutatogood011.png');
 }
+.goodContainer {
+    background-image: url('../imgaes//core-header-gomb-kimutatogood01.png');
+}
+.goodArrowImage.active {
+    background-image: url('../imgaes/core-header-gomb-kimutatogood012.png') ;
+}
+.goodContainer.active {
+    background-image: url('../imgaes/core-header-gomb-kimutatogood01aktiv.png') ;
+}
+.goodContainer.active .buttonText{
+    color: #0C594B;
+}
+.goodContainer.active .greenButtonStroke {
+        -webkit-text-stroke: 0px #293E07;
+        text-shadow:
+            0px 0px 0 #293E07,
+            0px 0px 0 #293E07,
+            0px 0px 0 #293E07,
+            0px 0px 0 #293E07;
+}
+/* .goodArrowImage:hover {
+    background-image: url('../imgaes/core-header-gomb-kimutato-good12nem_aktiv.png') ;
+}
+.goodContainer:hover {
+    background-image: url('../imgaes/core-header-gomb-kimutatogood01.png') ;
+}
+.kimutatasButtonTextContainer:hover+.goodArrowImage {
+    background-image: url('../imgaes/core-header-gomb-kimutato-good12nem_aktiv.png') ;
+}
+.goodArrowImage:hover~.goodContainer {
+    background-image: url('../imgaes/core-header-gomb-kimutatogood01.png') ;
+} */
+
+/* //////////////////////////////////// */
+
 .badArrowImage {
     background-image: url('../imgaes/core-header-gomb-kimutato-.bad11.png');
 }
-/* //////////////////////////////// */
-.kimutatasButtonTextContainer:hover+.badArrowImage {
-    width: auto;
-    background-image: url('../imgaes/core-header-gomb-kimutato-.bad12.png') !important;
-    margin-left: -3px !important;
-}
-
-.badArrowImage:hover {
-    background-image: url('../imgaes/core-header-gomb-kimutato-.bad12.png') !important;
-    margin-left: -3px !important;
+.badContainer {
+    background-image: url('../imgaes/core-header-gomb-kimutato-.bad01.png');
 }
 .badArrowImage.active {
-    background-image: url('../imgaes/core-header-gomb-kimutato-.bad12.png') !important;
-    margin-left: -3px !important;
+    background-image: url('../imgaes/core-header-gomb-kimutato-.bad12.png') ;
 }
-/* ///////////// */
-.kimutatasButtonTextContainer:hover+.bevezetuArrowImage {
-    width: auto;
-    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto12.png') !important;
-    margin-left: -3px !important;
+.badContainer.active {
+    background-image: url('../imgaes/core-header-gomb-kimutato-.bad01aktiv.png') ;
 }
+.badContainer.active .buttonText{
+    color: #681300;
+}
+.badContainer.active .redButtonStroke {
+        -webkit-text-stroke: 0px #293E07;
+        text-shadow:
+            0px 0px 0 #293E07,
+            0px 0px 0 #293E07,
+            0px 0px 0 #293E07,
+            0px 0px 0 #293E07;
+}
+/* .badArrowImage:hover {
+    background-image: url('../imgaes/core-header-gomb-kimutato-.bad12nem_aktiv.png') ;
+}
+.badContainer:hover {
+    background-image: url('../imgaes/core-header-gomb-kimutato-.bad01.png') ;
+}
+.kimutatasButtonTextContainer:hover+.badArrowImage {
+    background-image: url('../imgaes/core-header-gomb-kimutato-.bad12nem_aktiv.png') ;
+}
+.badArrowImage:hover~.badContainer {
+    background-image: url('../imgaes/core-header-gomb-kimutato-.bad01.png') ;
+} */
+/* ////////////////////////////// */
 
-.bevezetuArrowImage:hover {
-    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto12.png') !important;
-    margin-left: -3px !important;
-}
-.bevezetuArrowImage.active {
-    background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto12.png') !important;
-    margin-left: -3px !important;
-}
-/* ///////////// */
 
-.kimutatasButtonTextContainer:hover+.neutralArrowImage {
-    width: auto;
-    background-image: url('../imgaes/core-header-gomb-kimutatosemleges12.png') !important;
-    margin-left: -3px !important;
-}
-.neutralArrowImage:hover{
-    background-image: url('../imgaes/core-header-gomb-kimutatosemleges12.png') !important;
-    margin-left: -3px !important;
-}
-.neutralArrowImage.active {
-    background-image: url('../imgaes/core-header-gomb-kimutatosemleges12.png') !important;
-    margin-left: -3px !important;
-}
-/* /////////////////// */
-.kimutatasButtonTextContainer:hover+.goodArrowImage  {
-    width: auto;
-    background-image: url('../imgaes/core-header-gomb-kimutatogood012.png') !important;
-    margin-left: -3px !important;
-}
 
-.goodArrowImage:hover {
-    background-image: url('../imgaes/core-header-gomb-kimutatogood012.png') !important;
-    margin-left: -3px !important;
-}
-.goodArrowImage.active{
-    background-image: url('../imgaes/core-header-gomb-kimutatogood012.png') !important;
-    margin-left: -3px !important;
-}
 
 /* ////////////////////////////// */
 
@@ -421,6 +493,7 @@
 
 }
 .chartSectionContainer {
+    position: relative;
     width: 90%;
     height: auto;
     display: flex;
@@ -431,7 +504,9 @@
 
     /* border: 1px solid #000; */
 }
-
+.myChart{
+    background-color: #fff;
+}
 .informationColumn {
     width: 25%;
     aspect-ratio: 2.7;
@@ -710,7 +785,6 @@
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 22.5%;
     /* border: 1px solid #000; */
 }
 .low{
@@ -1020,4 +1094,12 @@ width: 160px;
     justify-content: flex-start;
     width: 95%;
 }
+.kimutatasNavButtonContainer{
+    width: 100%;
+}
+.kimutatasButtonTextContainer{
+    width: 100%;
+    justify-content: flex-start;
+}
+
 }

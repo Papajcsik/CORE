@@ -4,7 +4,7 @@
     src: url('../fonts/Alata-Regular.ttf') format('truetype');
     /* Path to the font file */
 }
-@keyframes slideIn {
+/* @keyframes slideIn {
     from {
         transform: translateX(-100%);
         opacity: 0.8;
@@ -14,7 +14,7 @@
         transform: translateX(0);
         opacity: 1;
     }
-}
+} */
 
 /* Apply animation to navbar elements */
 .div-back,
@@ -24,10 +24,10 @@
 .div-mid-fifty,
 .div-mid-hundred,
 .div-front {
-    animation: slideIn 1.2s  forwards;
+    /* animation: slideIn 1.2s  forwards; */
 }
 
-@keyframes slideOut {
+/* @keyframes slideOut {
     from {
         transform: translateX(0);
         opacity: 1;
@@ -37,12 +37,12 @@
         transform: translateX(-100%);
         opacity: 0.8;
     }
-}
+} */
 
 /* Class to trigger slide-out animation */
-.slide-out {
+/* .slide-out {
     animation: slideOut 1.2s ease-in-out forwards;
-}
+} */
 
 
 body{
@@ -157,13 +157,13 @@ body{
     z-index: 120;
 }
 .headerText {
-    font-size: 30px;
+    font-size: 40px;
     color: #fff;
     font-weight: 500;
     font-family: 'Alata-Regular', sans-serif;
     /* Use the imported font */
     margin: 5px;
-    -webkit-text-stroke: 0.2px #293E07;
+    /* -webkit-text-stroke: 0.2px #293E07; */
     text-shadow: 
         -1px -1px 0 #293E07,
         1px -1px 0 #293E07,
@@ -190,6 +190,7 @@ body{
     background-size: auto 100%;
     background-position: center;
     cursor: pointer;
+    transition: background-image 0.3s ease-in-out;
 }
 .hu{
     background-image: url('../imgaes/hunlangselect-02.png');
@@ -423,6 +424,10 @@ body{
     .logoText{
         font-size: 30px;
     }
+    .headerText{
+        font-size: 30px;
+    }
+    
     .contentContainer {
         flex-direction: column;
         padding-top: 30px;
@@ -495,7 +500,7 @@ body{
         font-size: 25px;
     }
     .headerText{
-        font-size: 22px;
+        font-size: 25px;
     }
 }
 @media (max-width: 600px) {

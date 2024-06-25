@@ -100,8 +100,8 @@
 }
 .chartImage{
     width: 99%;
-    aspect-ratio: 1.915;
-    background-image: url('../imgaes/Képernyőfelvétel\ \(571\).png');
+    aspect-ratio: 1.9;
+    background-image: url('../imgaes/zoldChart.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -158,8 +158,8 @@
 }
 .alsoChartImage{
     width: 99%;
-    aspect-ratio: 2.56;
-    background-image: url('../imgaes/erdemny\ bemutató01\ 1.png');
+    aspect-ratio: 1.9;
+    background-image: url('../imgaes/redChart.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

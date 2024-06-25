@@ -1,16 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const questions = [
-        { id: 1, text: "Nagyon komoly kerdes?", answer: 0, initialAnswer: 0 },
-        { id: 2, text: "Második kérdés?", answer: 0, initialAnswer: 0 },
-        { id: 3, text: "Harmadik kérdés?", answer: 0, initialAnswer: 0 },
-        { id: 4, text: "Negyedik kérdés?", answer: 0, initialAnswer: 0 },
-        // { id: 5, text: "Nagyon komoly kerdes?", answer: 0, initialAnswer: 0 },
-        // { id: 6, text: "Második kérdés?", answer: 0, initialAnswer: 0 },
-        // { id: 7, text: "Harmadik kérdés?", answer: 0, initialAnswer: 0 },
-        // { id: 8, text: "Nagyon komoly kerdes?", answer: 0, initialAnswer: 0 },
-        // { id: 9, text: "Második kérdés?", answer: 0, initialAnswer: 0 },
-        // { id: 10, text: "Harmadik kérdés?", answer: 0, initialAnswer: 0 },
-    ];
+
 
     const darkMode = true; //turn dark mode on and off
 
@@ -25,151 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const progress = (answeredQuestions / totalQuestions) * 100;
         progressBar.style.width = `${progress}%`;
     }
-
-    questions.forEach(question => {
-        const questionContainer = document.createElement('div');
-        questionContainer.className = 'questionContainerKerdoiv';
-
-        const questionTextContainer = document.createElement('div');
-        questionTextContainer.className = 'questiontextContainer';
-
-        const questionText = document.createElement('div');
-        questionText.className = 'KerdesTextkerodiv';
-        if(darkMode){
-        questionText.className = 'KerdesTextkerodiv whiteText';
-        }
-        questionText.textContent = `${question.id}. ${question.text}`;
-
-        const sliderContainer = document.createElement('div');
-        sliderContainer.className = 'slider-container';
-
-        const slider = document.createElement('input');
-        slider.type = 'range';
-        slider.id = `segmented-slider-${question.id}`;
-        slider.min = '1';
-        slider.max = '4';
-        slider.value = question.answer;
-        slider.step = '1';
-        slider.className = 'segmented-slider hidden-thumb'; // Add hidden-thumb class to hide the thumb initially
-
-        // Add event listener to update the array and progress bar
-        slider.addEventListener('input', function() {
-            question.answer = parseInt(slider.value, 10);
-            console.log(questions)
-            slider.classList.remove('hidden-thumb'); // Show the thumb when the slider is used
-            updateProgressBar();  // Update the progress bar
-            updateSelectedMarker(slider); // Update selected marker
-            updateThumbMargins(slider); // Update thumb margins
-
-        });
-
-        const optionTextContainer = document.createElement('div');
-        optionTextContainer.className = 'optionTextContainer';
-
-        const options = ['Nem Jellemző', 'Kevésbé Jellemző', 'Jellemző', 'Nagyon Jellemző'];
-        options.forEach((optionText, index) => {
-            const option = document.createElement('div');
-            option.className = 'optionText';
-        if(darkMode){
-            option.className = 'optionText whiteText';
-        }
-            if (index === 1) option.classList.add('centerLeft');
-            if (index === 2) option.classList.add('centerRight');
-            if (index === 3) option.classList.add('right');
-            option.textContent = optionText;
-            optionTextContainer.appendChild(option);
-        });
-
-        const hr = document.createElement('div');
-        hr.className = 'hr';
-
-        questionTextContainer.appendChild(questionText);
-        sliderContainer.appendChild(slider);
-        questionContainer.appendChild(questionTextContainer);
-        questionContainer.appendChild(sliderContainer);
-        questionContainer.appendChild(optionTextContainer);
-        questionContainer.appendChild(hr);
-        questionList.appendChild(questionContainer);
-    });
-
-    // Function to calculate the correct position for markers
-    function positionMarkers() {
-        const sliders = document.querySelectorAll('.segmented-slider');
-        sliders.forEach(slider => {
-            const sliderContainer = slider.parentElement;
-            const markerCount = 4;
-            const sliderWidth = sliderContainer.offsetWidth;
-            const markerWidth = 25; // Adjust this if your marker's width changes
-            // const thumb1 = document.querySelector('.sliderR::-webkit-slider-thumb');
-            // const thumb2 = document.querySelector('.sliderR::-moz-range-thumb');
-
-            // Remove existing markers
-            const existingMarkers = sliderContainer.querySelectorAll('.marker');
-            existingMarkers.forEach(marker => marker.remove());
-
-            // Create and position new markers
-            for (let i = 1; i <= markerCount; i++) {
-                const marker = document.createElement('div');
-                marker.className = 'marker';
-
-                let leftPosition = ((i - 1) / (markerCount - 1)) * (sliderWidth - markerWidth) + (markerWidth / 2);
-                if (i === 1) {
-                    // thumb1.marginLeft = 2;
-                    // thumb2.marginLeft = 2;
-
-                    leftPosition += 2.5; // Adjust the first marker
-                } else if (i === 2) {
-                    leftPosition += 1; // Adjust the first marker
-                }
-                else if (i === 3) {
-                    leftPosition -= 1.5; // Adjust the first marker
-                }
-                else if (i === 4) {
-                    leftPosition -= 2.5; // Adjust the first marker
-                    // thumb1.marginLeft = -2;
-                    // thumb2.marginLeft =-2;
-                }
-                //  else if (i === markerCount) {
-                //     leftPosition -= 1.5; // Adjust the last marker
-                // }
-
-                marker.style.left = `${leftPosition}px`;
-                marker.dataset.value = i;
-                sliderContainer.appendChild(marker);
-
-                
-            }
-            updateSelectedMarker(slider); // Update selected marker initially
-        });
-    }
-
-// Function to update the selected marker
-function updateSelectedMarker(slider) {
-    const sliderContainer = slider.parentElement;
-    const markers = sliderContainer.querySelectorAll('.marker');
-    const selectedValue = slider.value;
-
-    // Remove the selected class from all markers
-    markers.forEach(marker => {
-        marker.classList.remove('selected');
-    });
-
-    // Add the selected class to the marker with the current value
-    markers.forEach(marker => {
-        if (marker.dataset.value == selectedValue) {
-            marker.classList.add('selected');
-        }
-    });
-}
-
-
-// Initial marker positioning
-positionMarkers();
-
-// Remove selected class from all markers initially
-document.querySelectorAll('.marker').forEach(marker => {
-    marker.classList.remove('selected');
-});
 
 
 // Reposition markers on window resize
@@ -186,9 +30,65 @@ window.addEventListener('resize', positionMarkers);
     });
 
     // Initial progress bar update
-    updateProgressBar();
+    //updateProgressBar();
+});
+///////////////////////////////////////////////////////////////
+// Get all the radio button groups and the progress bar element
+const radioGroups = [...new Set([...document.querySelectorAll('input[type="radio"]')].map(rb => rb.name))];
+const progressBar = document.querySelector('.progressBarBar');
+const nextButton = document.getElementById('nextButton');
+
+// Add event listener to each radio button
+radioGroups.forEach(group => {
+  const groupButtons = document.querySelectorAll(`input[name="${group}"]`);
+  groupButtons.forEach(button => button.addEventListener('change', updateProgressBar));
 });
 
+// Function to update the progress bar
+function updateProgressBar() {
+  // Count the number of groups with a selected radio button
+  const numSelectedGroups = radioGroups.filter(group => {
+    return [...document.querySelectorAll(`input[name="${group}"]`)].some(rb => rb.checked);
+  }).length;
+
+  // Calculate the progress percentage
+  const progressPercentage = (numSelectedGroups / radioGroups.length) * 100;
+
+  // Update the width of the progress bar
+  progressBar.style.width = `${progressPercentage}%`;
+}
+
+// Function to check if all groups are complete
+function checkAllGroupsComplete() {
+  let allGroupsComplete = true;
+
+  radioGroups.forEach(group => {
+    const groupButtons = document.querySelectorAll(`input[name="${group}"]`);
+    const groupContainer = groupButtons[0].closest('.questionContainerKerdoiv');
+
+    if (![...groupButtons].some(rb => rb.checked)) {
+      allGroupsComplete = false;
+      groupContainer.classList.add('unanswered');
+    } else {
+      groupContainer.classList.remove('unanswered');
+    }
+  });
+
+  if (!allGroupsComplete) {
+    alert("Kérjük válaszoljon meg minden kérdést!");
+  } else {
+    // Proceed to the next step or form submission
+    console.log("All questions answered. Proceeding to next step...");
+  }
+}
+
+// Add event listener to the next button
+nextButton.addEventListener('click', checkAllGroupsComplete);
+
+// Initialize the progress bar on page load
+updateProgressBar();
+
+/////////////////////////////////////////////////////
 
 /////////////////////////////////////infinite slider
     const sliderQuestion= [
