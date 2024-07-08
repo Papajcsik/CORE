@@ -17,7 +17,7 @@
     margin-top: 30px;
 }
 .mainNavContainer{
-    width: 100%;
+    width: 500px;
     height: 100px;
     display: flex;
     flex-direction: row;
@@ -109,6 +109,8 @@
 .kiertekelesButtonText{
     font-size: 4vw;
 }
-
+.mainNavContainer{
+    width: 290px;
+}
 
 }

@@ -67,6 +67,11 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.transparentMan{
+    opacity: 0;
+    height: 0%;
+    aspect-ratio: 0;
+}
 .questionManKerdoiv {
     height: 100%;
     aspect-ratio: 0.943;
@@ -351,6 +356,16 @@
     margin-bottom: 25px;
     margin-top: 25px;
 }
+.imageOfNeutralMan{
+    width: 150px;
+    aspect-ratio: 0.627;
+    background-image: url('../imgaes/semleges-figura-_bland.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-bottom: 25px;
+    margin-top: 25px;  
+}
 .vr{
     width: 5px;
     height: 200px;
@@ -524,6 +539,9 @@
 .informationRed{
     background-color: #b95c5d;
 }
+.informationBlue{
+    background-color: #CBF9FF;
+}
 .informationColumnInner{
     height: 100%;
     width: 95%;
@@ -544,6 +562,9 @@
 }
 .redLine {
     background-color: #681300;
+}
+.neutralLine{
+    background-color: #2c4e7d;
 }
 .informationText{
     text-wrap: wrap;
@@ -567,6 +588,9 @@
 }
 .redText{
     color: #fff;
+}
+.BlueText{
+    color: #2c4e7d
 }
 .hrKimutatas{
     width: 90%;
@@ -1028,11 +1052,12 @@ width: 160px;
 }
 @media (max-width: 500px) {
 .kimutatasNavButtonContainer{
-    height: 40px;
+    height: 50px;
 }
 .buttonText{
-    font-size: 10px;
+    font-size: 12px;
     text-wrap: nowrap;
+    margin-top: 6px;
 }
 .kimutatasButtonArrowContainer{
     margin-left: -25px;
@@ -1044,11 +1069,11 @@ width: 160px;
 }
 @media (max-width: 450px) {
     .kimutatasNavButtonContainer {
-        height: 35px;
+        height: 45px;
     }
 
     .buttonText {
-        font-size: 10px;
+        font-size: 12px;
         text-wrap: wrap;
     }
 
@@ -1095,11 +1120,22 @@ width: 160px;
     width: 95%;
 }
 .kimutatasNavButtonContainer{
+    height: 60px;
     width: 100%;
 }
 .kimutatasButtonTextContainer{
     width: 100%;
     justify-content: flex-start;
 }
-
+.buttonText {
+    font-size: 15px;
+    margin-top: 8px;
+    text-wrap: wrap;
+    width: 80%;
+    text-align: center
+;}
+.transparentMan {
+    height: 100%;
+    aspect-ratio: 0.62;
+}
 }

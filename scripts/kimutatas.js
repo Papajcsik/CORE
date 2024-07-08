@@ -208,6 +208,8 @@ window.onload = function() {
 
 const greenCtx = document.getElementById('myChartGreen').getContext('2d');
 const redCtx = document.getElementById('myChartRed').getContext('2d');
+const blueCtx = document.getElementById('myChartBlue').getContext('2d');
+
 
 // Custom plugin to draw background for horizontal bar chart
 const backgroundPlugin = {
@@ -247,22 +249,22 @@ function createChart(ctx, color) {
         label: 'Eredményed',
         data: [100, 19, 30],
         borderWidth: 1,
-        backgroundColor: color === 'green' ? '#acbc73' : '#dc827e',
-        borderColor: color === 'green' ? '#0C594B' : '#681300',
+        backgroundColor: color === 'green' ? '#acbc73' : color === 'red' ? '#dc827e' : '#429dc7',
+        borderColor: color === 'green' ? '#0C594B' : color === 'red' ? '#681300' : '#2c4e7d',
         borderWidth: 1
     }, {
         label: 'Csoporteredmény',
         data: [10, 90, 39],
         borderWidth: 1,
-        backgroundColor: color === 'green' ? '#92c58b' : '#a13030',
-        borderColor: color === 'green' ? '#0C594B' : '#681300',
+        backgroundColor: color === 'green' ? '#92c58b' : color === 'red' ? '#a13030' : '#64a2e7',
+        borderColor: color === 'green' ? '#0C594B' : color === 'red' ? '#681300' : '#2c4e7d',
         borderWidth: 1
     }, {
         label: 'Országos Átlag',
         data: [75, 50, 1],
         borderWidth: 1,
-        backgroundColor: color === 'green' ? '#a6bb88' : '#953247',
-        borderColor: color === 'green' ? '#0C594B' : '#681300',
+        backgroundColor: color === 'green' ? '#a6bb88' : color === 'red' ? '#953247' : '#2c4e7d',
+        borderColor: color === 'green' ? '#0C594B' :  color === 'red' ? '#681300' : '#2c4e7d',
         borderWidth: 1
     }];
 
@@ -338,6 +340,7 @@ function createChart(ctx, color) {
 // Initialize the charts based on props
 const greenChart = createChart(greenCtx, 'green');
 const redChart = createChart(redCtx, 'red');
+const blueChart = createChart(blueCtx, 'blue');
 
 // Resize listener to recreate chart on window resize
 window.addEventListener('resize', () => {
@@ -345,6 +348,8 @@ window.addEventListener('resize', () => {
     redChart.destroy(); // Destroy the existing red chart instance
     greenChart = createChart(greenCtx, 'green'); // Create a new green chart instance
     redChart = createChart(redCtx, 'red'); // Create a new red chart instance
+    blueChart = createChart(blueCtx, 'blue');
+
 });
 
   /////////////////////////////////////////////////////////////////////////////////////////

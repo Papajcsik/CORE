@@ -35,9 +35,9 @@
 .explainingContainer1{
     width: 80%;
     height: auto;
-    padding: 10px;
+    padding: 5px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     background-color: #90848475;
     display: flex;
     justify-content: center;
@@ -89,6 +89,10 @@
 .explanationbox{
     width: 250px;
     height: auto;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -131,7 +135,7 @@
 }
 .alacsony{
     height: 100%;
-    width: 30%;
+    width: 33%;
     background-color: #fff;
     box-shadow: 2px 2px 2px 2px #0002;
     display: flex;
@@ -140,7 +144,7 @@
 }
 .normal {
     height: 100%;
-    width: 30%;
+    width: 33%;
     background-color: #D9D9D9;
     box-shadow: 2px 2px 2px 2px #0002;
     display: flex;
@@ -149,7 +153,7 @@
 }
 .magas {
     height: 100%;
-    width: 30%;
+    width: 33%;
     background-color: #b3b3b3;
     box-shadow: 2px 2px 2px 2px #0002;
     display: flex;
@@ -204,6 +208,37 @@
 }
 .redTextColor{
     color: #681300;
+}
+
+.chartImageRedSmall{
+    width: 99%;
+    aspect-ratio: 6.125;
+    background-image: url('../imgaes/redChartSmall.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.chartImageSemlegesSmall{
+    width: 99%;
+    aspect-ratio: 6.125;
+    background-image: url('../imgaes/blueChartSmall.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.chartImageGreenSmall{
+    width: 99%;
+    aspect-ratio: 6.125;
+    background-image: url('../imgaes/zoldChartSmall.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .thankYouContainer{
     width: 50%;
@@ -279,6 +314,10 @@
     font-size: 12px;
     text-wrap: wrap;
 }
+.mediumTextBemutato{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 }
 @media (max-width: 500px) {
 .greenLineBox{
@@ -301,6 +340,15 @@
             width: 95%;
             margin-left: 0px;
         }
+.greenLineBox {
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.normalAlacsonyMagasContainer {
+    width: 99%;
+}
 }
 @media (max-width: 400px) {
     .greenLineBox {
@@ -312,4 +360,8 @@
 .imageOfGreenMan {
     height: 120px;
 }
+.normalAlacsonyMagasContainer {
+    height: 50px;
+}
+
 }

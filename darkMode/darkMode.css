@@ -7,3 +7,9 @@ body{
 .whiteText{
     color: #fff;
 }
+.containerRightTransparent{
+    background-color: transparent;
+}
+.noBoxShadow{
+    box-shadow: 0px 0px 0px 0px transparent;
+}

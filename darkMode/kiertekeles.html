@@ -48,24 +48,14 @@
         <!-- Kiertekeles Navbar -->
         <div class="kiertekelesNavContainer">
             <div class="mainNavContainer">
-                <div class="option">
-                    <div class="OptionButton" onclick="toggleActive(this)">
-                        <div class="kiertekelesButtonText whiteText">Munkatársi kérdőiv</div>
+                    <!-- Dropdown -->
+                    <div class="custom-select selectOverride">
+                        <select>
+                            <option value="0">Munkatarsi Kerdoiv</option>
+                            <option value="1">Felsovezetoi Kerdoiv</option>
+                            <option value="2">Kozep es projektvezetoi kerdoiv</option>                    
+                        </select>
                     </div>
-                    <div class="arrowDown active"></div>
-                </div>
-                <div class="option">
-                    <div class="OptionButton" onclick="toggleActive(this)">
-                        <div class="kiertekelesButtonText whiteText">Felsővezetői kérdőiv</div>
-                    </div>
-                    <div class="arrowDown"></div>
-                </div>
-                <div class="option">
-                    <div class="OptionButton" onclick="toggleActive(this)">
-                        <div class="kiertekelesButtonText whiteText">Közép- és projectvezetői kérdőiv</div>
-                    </div>
-                    <div class="arrowDown"></div>
-                </div>
             </div>
 
             <div class="selectorContainerKiertekeles">
@@ -226,7 +216,7 @@
             <!-- Button -->
             <div class="kimutatasNavButtonContainer" onclick="showContent('content4', this)">
                 <div class="kimutatasButtonTextContainer neutralContainer">
-                    <!-- <div class="neutralMan"></div> -->
+                    <div class="transparentMan"></div>
                     <div class="buttonText greenButtonStroke">Reziliencia</div>
                 </div>
                 <div class="kimutatasButtonArrowContainer neutralArrowImage"></div>
@@ -290,7 +280,7 @@
             <div class="kimutatasNavButtonContainer" onclick="showContent('content10', this)">
                 <div class="kimutatasButtonTextContainer badContainer">
                     <div class="depressedManKerdoiv"></div>
-                    <div class="buttonText redButtonStroke">Jaj ne ez egy nagyon hosszu es aggaszto szoveg</div>
+                    <div class="buttonText redButtonStroke">Jaj ne ez igy nagyon hosszu</div>
                 </div>
                 <div class="kimutatasButtonArrowContainer badArrowImage"></div>
             </div>

@@ -126,36 +126,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize the position of the percentage text
     slider.dispatchEvent(new Event('input'));
 });
-window.addEventListener('resize', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const slider = document.getElementById('myRangeR');
     const percentageText = document.getElementById('percentage');
 
-    // Update the percentage text when slider value changes
-    slider.addEventListener('input', function() {
-        const value = this.value;
+    function updatePercentageTextPosition() {
+        const value = slider.value;
         percentageText.textContent = value + '%';
-        sliderQuestion[0].answer = this.value;
-        // console.log(sliderQuestion)
+
         // Calculate the position of the percentage text relative to the thumb
-        const sliderRect = this.getBoundingClientRect();
-        const percentageTextWidth = percentageText.offsetWidth;
-        const thumbOffset = ((value - this.min) / (this.max - this.min)) * sliderRect.width;
+        const sliderRect = slider.getBoundingClientRect();
+        const thumbOffset = ((value - slider.min) / (slider.max - slider.min)) * sliderRect.width;
 
-        // Adjust the margin-left of the percentage text to center it over the thumb
-        const marginLeft = thumbOffset - (percentageTextWidth / 2);
+        // Adjust the left position of the percentage text to center it over the thumb
+        percentageText.style.left = `${thumbOffset}px`;
+    }
 
-        // Ensure the text stays within the slider bounds
-        if (marginLeft < 0) {
-            percentageText.style.marginLeft = '0px';
-        } else if (marginLeft + percentageTextWidth > sliderRect.width) {
-            percentageText.style.marginLeft = `${sliderRect.width - percentageTextWidth}px`;
-        } else {
-            percentageText.style.marginLeft = `${marginLeft}px`;
-        }
-    });
+    // Update the percentage text when slider value changes
+    slider.addEventListener('input', updatePercentageTextPosition);
 
     // Initialize the position of the percentage text
-    slider.dispatchEvent(new Event('input'));
+    updatePercentageTextPosition();
+    
+    // Handle window resize to reposition the percentage text
+    window.addEventListener('resize', updatePercentageTextPosition);
 });
 
     // SLider bg color
@@ -166,7 +160,7 @@ window.addEventListener('resize', function() {
         const value = this.value;
         percentageText.textContent = `${value}%`;
         const percentage = value / this.max * 100;
-        this.style.background = `linear-gradient(to right, #51BCDA ${percentage}%, #d3d3d3 ${percentage}%)`;
+        this.style.background = `linear-gradient(to right, #00A2CF ${percentage}%, #d3d3d3 ${percentage}%)`;
     });
 
     // Initialize background

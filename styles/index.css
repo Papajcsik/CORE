@@ -584,23 +584,26 @@ body{
 
 @media (max-width: 400px) {
     .div-back {
-        height: 30px;
+        height: 45px;
     }
     .div-mid {
-        height: 30px;
+        height: 45px;
+    }
+    .div-mid-fifty{
+        width: 50%;
     }
     .div-front {
-        height: 30px;
+        height: 45px;
     }   
     .logo{
         margin-left: 1px;
         margin-right: 1px;
     }
     .logoText{
-        font-size: 10px;
+        font-size: 3.5vw;
     }
     .headerText{
-        font-size: 12px;
+        font-size: 14px;
         -webkit-text-stroke: 0.2px #000;
     }
     .mediumtext{

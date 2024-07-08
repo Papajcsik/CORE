@@ -85,7 +85,7 @@
             <!-- Button -->
             <div class="kimutatasNavButtonContainer" onclick="showContent('content4', this)">
                 <div class="kimutatasButtonTextContainer neutralContainer">
-                    <!-- <div class="neutralMan"></div> -->
+                    <div class="transparentMan"></div>
                     <div class="buttonText greenButtonStroke">Reziliencia</div>
                 </div>
                 <div class="kimutatasButtonArrowContainer neutralArrowImage"></div>
@@ -149,7 +149,7 @@
             <div class="kimutatasNavButtonContainer" onclick="showContent('content10', this)">
                 <div class="kimutatasButtonTextContainer badContainer">
                     <div class="depressedManKerdoiv"></div>
-                    <div class="buttonText redButtonStroke">Jaj ne ez egy nagyon hosszu es aggaszto szoveg</div>
+                    <div class="buttonText redButtonStroke">Jaj ne ez igy nagyon hosszu</div>
                 </div>
                 <div class="kimutatasButtonArrowContainer badArrowImage"></div>
             </div>
@@ -269,7 +269,7 @@
                     </div>
                     <div class="summaryTextContainer">
                         <div class="summarytext redText">
-                            Kiváló érték
+                            Alacsony érték
                         </div>
                         <div class="summarytextInner">
                             <div class="summarytext redText">
@@ -317,7 +317,7 @@
 
             </div>
 
-            <!-- Chart 1 -->
+            <!-- Chart 2 -->
             <div class="chartSectionContainer">
                 <canvas id="myChartRed" prop="red" class="myChart"></canvas>
             </div>
@@ -343,9 +343,96 @@
                 </div>
             </div>
         </div>
-        <!-- Content01 end -->
+        <!-- Content02 end -->
+
+<!-- Content03 start -->
+<div class="InnerContentContainer" id="content3">
+
+    <!-- bigtextContainer -->
+    <div class="bigtextContainer informationBlue">
+
+        <div class="rowToColumn">
+            <div class="imageOfNeutralMan">
+            </div>
+            <div class="vr neutralLine">
+            </div>
+            <div class="summaryTextContainer">
+                <div class="summarytext BlueText">
+                    Normal érték
+                </div>
+                <div class="summarytextInner">
+                    <div class="summarytext BlueText">
+                        Eredményed: 89,56
+                    </div>
+                    <div class="summarytext BlueText">
+                        Normál tartomány: 44.3 - 68.3
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="moreText BlueText">
+            A kontroll azt jelenti, hogy képes vagy a munkahelyi körülményeidet bizonyos mértékig befolyásolni,
+            vannak
+            olyan munkát
+            érintő tényezők, melyekre ráhatásod van. Ilyen lehet például, hogy az elvégzendő feladatok
+            sorrendjét magad
+            határozhatod
+            meg. Ha rendelkezel bizonyos mértékű hatáskörrel a mindennapi munkavégzésed felett, akkor
+            valószínűleg
+            elégedettebb vagy
+            a munkahelyeddel, és a kiégés veszélye is kevésbé fenyeget. Ebben a dimenzióban összességében
+            átlagos
+            pontértéket értél
+            el (lásd: 1. oszlop), ami számodra fontos stresszcsökkentő tényező, mert képes vagy a magas
+            munkahelyi
+            követelmények
+            által keltett stresszt kezelni, így a krónikus stressz kialakulásának kockázata alacsony nálad.
+            Érdemes az egyes összetevőket (munkakörülmények, fejlődési lehetőség, szaktudásnak megfelelő
+            munkakör,
+            értelmes és
+            értékes munkavégzés, döntés és felelősség, megfelelő információk) bemutató oszlopok értékeit
+            önállóan is
+            megvizsgálnod.
+            Ha az összesített átlagos szint ellenére vannak kiugróan alacsony értékeid, miért érzed alacsonynak
+            a
+            ráhatásodat ezeken
+            a területeken? Az alacsony pontszámú területek tudatos fejlesztésével a benned keletkező munkahelyi
+            stressz
+            mértéke
+            csökkenthető.
+        </div>
+
+    </div>
+
+    <!-- Chart 3 -->
+    <div class="chartSectionContainer">
+        <canvas id="myChartBlue" prop="blue" class="myChart"></canvas>
+    </div>
 
 
+    <div class="lowMidHighContainer">
+        <div class="low">
+            <div class="lowMidHighText">Alacsony</div>
+        </div>
+        <div class="mid">
+            <div class="lowMidHighText">Normál</div>
+        </div>
+        <div class="high">
+            <div class="lowMidHighText">Magas</div>
+        </div>
+    </div>
+
+    <div class="nextButtonContainer">
+        <!-- Button -->
+        <div class="button">
+            <text class="buttonTextIndex">Tovább</text>
+            <div class="buttonImage"></div>
+        </div>
+    </div>
+</div>
+<!-- Content01 end -->
 
     </div>
     <script src="../scripts/index.js"></script>
