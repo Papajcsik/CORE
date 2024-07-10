@@ -59,8 +59,8 @@ body{
     width: 100%;
     height: 70px;
     margin-top: 10px;
-    /* background-image: url('../imgaes/rva-hosszuvege.png'); */
-    background-image: url('../imgaes/rva-hosszu-nyilkiiro_javitott_nincs_bevillanas.png');
+    background-image: url('../imgaes/rva-hosszuvege.png');
+    /* background-image: url('../imgaes/rva-hosszu-nyilkiiro_javitott_nincs_bevillanas.png'); */
     background-repeat: no-repeat;
     background-size: auto 100%;
         /* Maintain height, adjust width */
@@ -75,15 +75,15 @@ body{
 }
 .div-back-seventyfive{
     height: 100%;
-    width: 100%;
+    width: 80%;
     z-index: 120;
 }
 .div-back-hundred {
     height: 100%;
-    width: 0%;
+    width: 20%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     padding-right: 40px;
     z-index: 120;
@@ -91,7 +91,7 @@ body{
 .div-mid{
     width: 100%;
     height: 70px;
-    /* background-image: url('../imgaes/rva-hosszu-nyilkiiro_javitott_nincs_bevillanas.png'); */
+    background-image: url('../imgaes/rva-hosszu-nyilkiiro_javitott_nincs_bevillanas.png');
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: right;
@@ -102,7 +102,7 @@ body{
 }
 .div-mid-fifty{
     height: 100%;
-    width: 25%;
+    width: 50%;
     z-index: 120;
 
 }
@@ -170,7 +170,7 @@ body{
         -1px 1px 0 #293E07,
         1px 1px 0 #293E07; /* Simulates an outside stroke */
     z-index: 120;
-    width: 70%;
+    width: 100%;
     text-align: center;
     
 }
@@ -383,7 +383,7 @@ body{
         width: 25%;
     }
     .div-mid-fifty {
-        width: 30%;
+        width: 40%;
     }
     .div-mid-hundred{
         width: 70%;
@@ -405,7 +405,7 @@ body{
         height: 40px;
     }
     .div-mid-fifty {
-        width: 35%;
+        width: 45%;
     }
     .div-mid-hundred{
         width: 65%;
@@ -590,7 +590,7 @@ body{
         height: 45px;
     }
     .div-mid-fifty{
-        width: 50%;
+        width: 70%;
     }
     .div-front {
         height: 45px;

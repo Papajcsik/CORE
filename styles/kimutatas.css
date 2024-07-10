@@ -357,7 +357,7 @@
     margin-top: 25px;
 }
 .imageOfNeutralMan{
-    width: 150px;
+    width: 100px;
     aspect-ratio: 0.627;
     background-image: url('../imgaes/semleges-figura-_bland.png');
     background-repeat: no-repeat;
@@ -365,6 +365,7 @@
     background-position: center;
     margin-bottom: 25px;
     margin-top: 25px;  
+    margin-right: 20px;
 }
 .vr{
     width: 5px;

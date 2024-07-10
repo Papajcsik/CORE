@@ -182,6 +182,9 @@
 .redLineBoxColoring{
     background-color: #dc827e;
 }
+.blueLineBoxColoring {
+    background-color: #CBF9FF;
+}
 .greenLineBoxInner{
     height: 100%;
     width: 80%;
@@ -206,8 +209,20 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.imageOfBlueMan{
+    height: 160px;
+    aspect-ratio: 0.62;
+    background-image: url('../imgaes/semleges-figura-_bland.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
 .redTextColor{
     color: #681300;
+}
+.blueTextColor {
+    color: #2c4e7d;
 }
 
 .chartImageRedSmall{
