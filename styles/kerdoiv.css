@@ -508,10 +508,26 @@ margin-left: 47%;
 
 }
 .progressBarBar{
+    position: absolute;
     width: 0%;
     height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     background-color: #00A2CF;
     transition: width 0.5s ease-in-out;
+    z-index: 99;
+}
+.progressBarPercentage{
+    height: 100%;
+    font-size: 22px;
+    color: #454E24;
+    font-weight: 500;
+    font-family: 'Alata-Regular', sans-serif;
+    margin: 5px; 
+    margin-bottom: 10px;
+    text-align: left;
+    z-index: 100 !important;
 }
 /* /////////////////////////////////////////////////////////////////// */
 

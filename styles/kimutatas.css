@@ -60,7 +60,7 @@
     cursor: pointer;
 }
 .neutralMan{
-    height: 100%;
+    height: 90%;
     aspect-ratio: 0.62;
     background-image: url('../imgaes/semleges-figura-_bland.png');
     background-size: contain;
@@ -73,7 +73,7 @@
     aspect-ratio: 0;
 }
 .questionManKerdoiv {
-    height: 100%;
+    height: 90%;
     aspect-ratio: 0.943;
     background-image: url('../imgaes/kerdoiv-figura_bland.png');
     background-size: contain;
@@ -81,7 +81,7 @@
     background-repeat: no-repeat;
 }
 .proudManKerdoiv {
-    height: 100%;
+    height: 90%;
     aspect-ratio: 1.08;
     background-image: url('../imgaes/healthy-figura_bland.png');
     background-size: contain;
@@ -89,7 +89,7 @@
     background-repeat: no-repeat;
 }
 .depressedManKerdoiv{
-    height: 100%;
+    height: 90%;
     aspect-ratio: 0.943;
     background-image: url('../imgaes/kiegett-figura_bland.png');
     background-size: contain;

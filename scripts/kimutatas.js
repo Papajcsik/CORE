@@ -204,47 +204,35 @@ window.onload = function() {
 //     });
 // });
 
-////////////////////////////////////////////////////////////////////////////// chartJS
+
+/////////////////////////////////////////////////////////////////////////////////chart js
 
 const greenCtx = document.getElementById('myChartGreen').getContext('2d');
 const redCtx = document.getElementById('myChartRed').getContext('2d');
 const blueCtx = document.getElementById('myChartBlue').getContext('2d');
 
-
-// Custom plugin to draw background for horizontal bar chart
 const backgroundPlugin = {
     id: 'customBackground',
     beforeDraw: (chart) => {
         const { ctx, chartArea: { left, right, top, bottom, width, height }, scales: { x } } = chart;
-
-        // Calculate the points for each range
         const fiftyPercent = x.getPixelForValue(50);
         const eightyPercent = x.getPixelForValue(80);
 
-        // Draw white background (0% to 50%)
         ctx.save();
         ctx.fillStyle = 'white';
         ctx.fillRect(left, top, fiftyPercent - left, height);
-
-        // Draw grey background (50% to 80%)
         ctx.fillStyle = 'lightgrey';
         ctx.fillRect(fiftyPercent, top, eightyPercent - fiftyPercent, height);
-
-        // Draw dark grey background (80% to 100%)
         ctx.fillStyle = 'grey';
         ctx.fillRect(eightyPercent, top, right - eightyPercent, height);
-
         ctx.restore();
     }
 };
 
-// Register the custom background plugin with Chart.js
 Chart.register(backgroundPlugin);
 
-// Function to create chart with responsive options
 function createChart(ctx, color) {
     const chartWidth = ctx.canvas.clientWidth;
-
     const datasets = [{
         label: 'Eredményed',
         data: [100, 19, 30],
@@ -268,8 +256,8 @@ function createChart(ctx, color) {
         borderWidth: 1
     }];
 
-    const barThickness = chartWidth < 500 ? 50 : 15; // Adjust bar thickness
-    const fontSize = chartWidth < 500 ? 14 : 24; // Adjust font size
+    const barThickness = chartWidth < 500 ? 50 : 15;
+    const fontSize = chartWidth < 500 ? 14 : 24;
 
     return new Chart(ctx, {
         type: 'bar',
@@ -337,19 +325,15 @@ function createChart(ctx, color) {
     });
 }
 
-// Initialize the charts based on props
-const greenChart = createChart(greenCtx, 'green');
-const redChart = createChart(redCtx, 'red');
-const blueChart = createChart(blueCtx, 'blue');
+let greenChart = createChart(greenCtx, 'green');
+let redChart = createChart(redCtx, 'red');
+let blueChart = createChart(blueCtx, 'blue');
 
-// Resize listener to recreate chart on window resize
 window.addEventListener('resize', () => {
-    greenChart.destroy(); // Destroy the existing green chart instance
-    redChart.destroy(); // Destroy the existing red chart instance
-    greenChart = createChart(greenCtx, 'green'); // Create a new green chart instance
-    redChart = createChart(redCtx, 'red'); // Create a new red chart instance
+    greenChart.destroy();
+    redChart.destroy(); 
+    blueChart.destroy();
+    greenChart = createChart(greenCtx, 'green');
+    redChart = createChart(redCtx, 'red');
     blueChart = createChart(blueCtx, 'blue');
-
 });
-
-  /////////////////////////////////////////////////////////////////////////////////////////

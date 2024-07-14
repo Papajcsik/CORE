@@ -1,69 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles/index.css"/>
-        <link rel="icon" type="image/x-icon" href="./imgaes/LOGO_javitott.png">
-        <title>C.O.R.E. Kezdőlap</title>
-    </head>
-    <body>
-        
-        <!-- Navbar -->
-        <div class="div-back">
-            <div class="div-back-seventyfive">
 
-                <div class="div-mid">
-                    <div class="div-mid-fifty">
-                        <div class="div-front">
-                            <div class="logo"></div>
-                            <text class="logoText">C.O.R.E.</text>
-                        </div>
-                    </div>
-                    <div class="div-mid-hundred">
-                        <text class="headerText">Kérdőív</text>
-                        <div class="languageSelectorContainer">
-                            <div class="en active" onclick="toggleLanguage('en')"></div>
-                            <div class="hu" onclick="toggleLanguage('hu')"></div>
-                        </div>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="icon" type="image/x-icon" href="./imgaes/LOGO_javitott.png">
+    <title>C.O.R.E. Kezdőlap</title>
+</head>
 
+<body>
+
+    <!-- Navbar -->
+    <div class="div-back">
+        <div class="div-back-seventyfive">
+
+            <div class="div-mid">
+                <div class="div-mid-fifty">
+                    <div class="div-front">
+                        <div class="logo"></div>
+                        <text class="logoText">C.O.R.E.</text>
+                    </div>
+                </div>
+                <div class="div-mid-hundred">
+                    <text class="headerText">Kérdőív</text>
 
                 </div>
-            </div>
-            <div class="div-back-hundred">
-                <div class="placeholderLogo"></div>
+
+
             </div>
         </div>
+        <div class="div-back-hundred">
+            <div class="placeholderLogo"></div>
+        </div>
+    </div>
 
-        <!-- Body -->
-        <div class="contentContainer">
+    <!-- Body -->
+    <div class="contentContainer">
 
-            <div class="containerLeft">
-                <div class="readingMan"></div>
-                <div class="proudMan"></div>
-                <div class="depressedMan"></div>
-                <div class="questioningMan"></div>
+        <div class="containerLeft">
+            <div class="readingMan"></div>
+            <div class="proudMan"></div>
+            <div class="depressedMan"></div>
+            <div class="questioningMan"></div>
 
+        </div>
+
+        <div class="containerRight containerRightBlack">
+            <text class="bigText">Tájékoztatás</text>
+            <text class="mediumtext">
+                A Rávezető beszélő név. Hisszük, hogy leendő ügyfeleink ismerik stratégiai céljaikat, támogatást a célok
+                eléréséhez
+                vezető út kiválasztásához, megépítéséhez igényelnek. Az egyéni és szervezeti minőség és teljesítmény
+                növelésében tudunk
+                segíteni, közös gondolkodással, elhivatott szakemberekkel.
+            </text>
+
+            <div class="languageSelectorContainer">
+                <div class="en active" onclick="toggleLanguage('en')"></div>
+                <div class="hu" onclick="toggleLanguage('hu')"></div>
             </div>
 
-            <div class="containerRight">
-                <text class="bigText">Tájékoztatás</text>
-                <text class="mediumtext">
-                    A Rávezető beszélő név. Hisszük, hogy leendő ügyfeleink ismerik stratégiai céljaikat, támogatást a célok eléréséhez
-                    vezető út kiválasztásához, megépítéséhez igényelnek. Az egyéni és szervezeti minőség és teljesítmény növelésében tudunk
-                    segíteni, közös gondolkodással, elhivatott szakemberekkel.
-                </text>
-
-                <!-- Button -->
-                <div class="button">
-                    <text class="buttonText">Elfogadás</text>
-                    <div class="buttonImage"></div>
-                </div>
-                
+            <!-- Button -->
+            <div class="button">
+                <text class="buttonText">Elfogadás</text>
+                <div class="buttonImage"></div>
             </div>
 
         </div>
-         <script src="./scripts/index.js"></script>
-    </body>
+
+    </div>
+    <script src="./scripts/index.js"></script>
+</body>
+
 </html>

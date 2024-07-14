@@ -44,21 +44,19 @@ radioGroups.forEach(group => {
   groupButtons.forEach(button => button.addEventListener('change', updateProgressBar));
 });
 
-// Function to update the progress bar
+//
+
 function updateProgressBar() {
-  // Count the number of groups with a selected radio button
   const numSelectedGroups = radioGroups.filter(group => {
     return [...document.querySelectorAll(`input[name="${group}"]`)].some(rb => rb.checked);
   }).length;
 
-  // Calculate the progress percentage
   const progressPercentage = (numSelectedGroups / radioGroups.length) * 100;
 
-  // Update the width of the progress bar
   progressBar.style.width = `${progressPercentage}%`;
+  progressBarPercentage.textContent = `${Math.round(progressPercentage)}%`;
 }
 
-// Function to check if all groups are complete
 function checkAllGroupsComplete() {
   let allGroupsComplete = true;
 
@@ -77,16 +75,21 @@ function checkAllGroupsComplete() {
   if (!allGroupsComplete) {
     alert("Kérjük válaszoljon meg minden kérdést!");
   } else {
-    // Proceed to the next step or form submission
     console.log("All questions answered. Proceeding to next step...");
   }
 }
 
-// Add event listener to the next button
 nextButton.addEventListener('click', checkAllGroupsComplete);
+window.addEventListener('load', updateProgressBar);
 
-// Initialize the progress bar on page load
-updateProgressBar();
+// Also add an event listener for any radio button changes
+radioGroups.forEach(group => {
+  const groupButtons = document.querySelectorAll(`input[name="${group}"]`);
+  groupButtons.forEach(button => {
+    button.addEventListener('change', updateProgressBar);
+  });
+});
+
 
 /////////////////////////////////////////////////////
 
