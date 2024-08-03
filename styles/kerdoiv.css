@@ -520,14 +520,19 @@ margin-left: 47%;
 }
 .progressBarPercentage{
     height: 100%;
-    font-size: 22px;
-    color: #454E24;
+    font-size: 20px;
+    color: #fff;
     font-weight: 500;
     font-family: 'Alata-Regular', sans-serif;
     margin: 5px; 
     margin-bottom: 10px;
     text-align: left;
     z-index: 100 !important;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}   
+.progressBarPercentage.visible {
+    opacity: 1;
 }
 /* /////////////////////////////////////////////////////////////////// */
 

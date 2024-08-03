@@ -1,93 +1,85 @@
 document.addEventListener('DOMContentLoaded', function() {
-
-
     const darkMode = true; //turn dark mode on and off
 
     const questionList = document.getElementById('question-list');
     const questionListDark = document.getElementById('question-list');
     const progressBar = document.querySelector('.progressBarBar');
+    const progressBarPercentage = document.querySelector('.progressBarPercentage');
 
-    // Function to update progress bar
+    const radioGroups = [...new Set([...document.querySelectorAll('input[type="radio"]')].map(rb => rb.name))];
+    const nextButton = document.getElementById('nextButton');
+
+    let currentPercentage = 0;
+
     function updateProgressBar() {
-        const answeredQuestions = questions.filter(q => q.answer !== q.initialAnswer).length;
-        const totalQuestions = questions.length;
-        const progress = (answeredQuestions / totalQuestions) * 100;
-        progressBar.style.width = `${progress}%`;
+        const numSelectedGroups = radioGroups.filter(group => {
+            return [...document.querySelectorAll(`input[name="${group}"]`)].some(rb => rb.checked);
+        }).length;
+
+        const progressPercentage = (numSelectedGroups / radioGroups.length) * 100;
+
+        progressBar.style.width = `${progressPercentage}%`;
+
+        // Show or hide the percentage based on the progress value
+        if (progressPercentage > 0) {
+            progressBarPercentage.classList.add('visible');
+            animateProgressBar(currentPercentage, progressPercentage);
+            currentPercentage = progressPercentage;
+        } else {
+            progressBarPercentage.classList.remove('visible');
+            currentPercentage = 0;
+        }
     }
 
+    function animateProgressBar(start, end) {
+        const duration = 500; // duration in milliseconds
+        const stepTime = Math.abs(Math.floor(duration / (end - start)));
+        let current = start;
+        const increment = end > start ? 1 : -1;
 
-// Reposition markers on window resize
-window.addEventListener('resize', positionMarkers);
+        const timer = setInterval(() => {
+            current += increment;
+            progressBarPercentage.textContent = `${current}%`;
 
-    // Move thumb to marker on marker click
-    document.querySelector('.kerdoivKerdesek').addEventListener('click', function(event) {
-        if (event.target.classList.contains('marker')) {
-            const slider = event.target.closest('.slider-container').querySelector('input[type="range"]');
-            const value = event.target.dataset.value;
-            slider.value = value;
-            slider.dispatchEvent(new Event('input')); // Trigger input event to update slider
+            if (current === end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+    function checkAllGroupsComplete() {
+        let allGroupsComplete = true;
+
+        radioGroups.forEach(group => {
+            const groupButtons = document.querySelectorAll(`input[name="${group}"]`);
+            const groupContainer = groupButtons[0].closest('.questionContainerKerdoiv');
+
+            if (![...groupButtons].some(rb => rb.checked)) {
+                allGroupsComplete = false;
+                groupContainer.classList.add('unanswered');
+            } else {
+                groupContainer.classList.remove('unanswered');
+            }
+        });
+
+        if (!allGroupsComplete) {
+            alert("Kérjük válaszoljon meg minden kérdést!");
+        } else {
+            console.log("All questions answered. Proceeding to next step...");
         }
+    }
+
+    nextButton.addEventListener('click', checkAllGroupsComplete);
+    window.addEventListener('load', updateProgressBar);
+
+    radioGroups.forEach(group => {
+        const groupButtons = document.querySelectorAll(`input[name="${group}"]`);
+        groupButtons.forEach(button => {
+            button.addEventListener('change', updateProgressBar);
+        });
     });
 
-    // Initial progress bar update
-    //updateProgressBar();
-});
-///////////////////////////////////////////////////////////////
-// Get all the radio button groups and the progress bar element
-const radioGroups = [...new Set([...document.querySelectorAll('input[type="radio"]')].map(rb => rb.name))];
-const progressBar = document.querySelector('.progressBarBar');
-const nextButton = document.getElementById('nextButton');
-
-// Add event listener to each radio button
-radioGroups.forEach(group => {
-  const groupButtons = document.querySelectorAll(`input[name="${group}"]`);
-  groupButtons.forEach(button => button.addEventListener('change', updateProgressBar));
-});
-
-//
-
-function updateProgressBar() {
-  const numSelectedGroups = radioGroups.filter(group => {
-    return [...document.querySelectorAll(`input[name="${group}"]`)].some(rb => rb.checked);
-  }).length;
-
-  const progressPercentage = (numSelectedGroups / radioGroups.length) * 100;
-
-  progressBar.style.width = `${progressPercentage}%`;
-  progressBarPercentage.textContent = `${Math.round(progressPercentage)}%`;
-}
-
-function checkAllGroupsComplete() {
-  let allGroupsComplete = true;
-
-  radioGroups.forEach(group => {
-    const groupButtons = document.querySelectorAll(`input[name="${group}"]`);
-    const groupContainer = groupButtons[0].closest('.questionContainerKerdoiv');
-
-    if (![...groupButtons].some(rb => rb.checked)) {
-      allGroupsComplete = false;
-      groupContainer.classList.add('unanswered');
-    } else {
-      groupContainer.classList.remove('unanswered');
-    }
-  });
-
-  if (!allGroupsComplete) {
-    alert("Kérjük válaszoljon meg minden kérdést!");
-  } else {
-    console.log("All questions answered. Proceeding to next step...");
-  }
-}
-
-nextButton.addEventListener('click', checkAllGroupsComplete);
-window.addEventListener('load', updateProgressBar);
-
-// Also add an event listener for any radio button changes
-radioGroups.forEach(group => {
-  const groupButtons = document.querySelectorAll(`input[name="${group}"]`);
-  groupButtons.forEach(button => {
-    button.addEventListener('change', updateProgressBar);
-  });
+    updateProgressBar(); // Initial call to set the progress bar on page load
 });
 
 
