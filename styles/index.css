@@ -391,6 +391,17 @@ body{
 
 }
 /* Media query for screens below 1000 pixels */
+@media (max-width: 1050px) {
+    .div-mid-fifty {
+            width: 50%;
+        }
+    
+        .div-mid-hundred {
+            width: 60%;
+        }
+}
+
+
 @media (max-width: 1000px) {
     .containerRight {
         margin-right: 2%;
@@ -404,12 +415,7 @@ body{
     .button {
         height: 40px;
     }
-    .div-mid-fifty {
-        width: 45%;
-    }
-    .div-mid-hundred{
-        width: 65%;
-    }
+
 }
 @media (max-width: 850px) {
     .div-back {
@@ -590,7 +596,7 @@ body{
         height: 45px;
     }
     .div-mid-fifty{
-        width: 70%;
+        width: 75%;
     }
     .div-front {
         height: 45px;

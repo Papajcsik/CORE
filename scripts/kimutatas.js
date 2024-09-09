@@ -234,21 +234,21 @@ Chart.register(backgroundPlugin);
 function createChart(ctx, color) {
     const chartWidth = ctx.canvas.clientWidth;
     const datasets = [{
-        label: 'Eredményed',
+        label: 'eredményed',
         data: [100, 19, 30],
         borderWidth: 1,
         backgroundColor: color === 'green' ? '#acbc73' : color === 'red' ? '#dc827e' : '#429dc7',
         borderColor: color === 'green' ? '#0C594B' : color === 'red' ? '#681300' : '#2c4e7d',
         borderWidth: 1
     }, {
-        label: 'Csoporteredmény',
+        label: 'csoporteredmény',
         data: [10, 90, 39],
         borderWidth: 1,
         backgroundColor: color === 'green' ? '#92c58b' : color === 'red' ? '#a13030' : '#64a2e7',
         borderColor: color === 'green' ? '#0C594B' : color === 'red' ? '#681300' : '#2c4e7d',
         borderWidth: 1
     }, {
-        label: 'Országos Átlag',
+        label: 'országos átlag',
         data: [75, 50, 1],
         borderWidth: 1,
         backgroundColor: color === 'green' ? '#a6bb88' : color === 'red' ? '#953247' : '#2c4e7d',
@@ -262,7 +262,7 @@ function createChart(ctx, color) {
     return new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Elso', 'Masodik ertek', 'Huu de jo'],
+            labels: ['Munkakörülmények', 'Fejlődés, karrier', 'Munkaérték'],
             datasets: datasets
         },
         options: {
