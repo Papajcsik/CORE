@@ -107,22 +107,20 @@
     transition: color 0.3s ease-in-out;
 }
 .greenButtonStroke{
-    -webkit-text-stroke: 0.2px #293E07; /* Adds the stroke */
+    /* -webkit-text-stroke: 0.2px #293E07; 
     text-shadow: 
         -1px -1px 0 #293E07,
         1px -1px 0 #293E07,
         -1px 1px 0 #293E07,
-        1px 1px 0 #293E07; /* Simulates an outside stroke */
+        1px 1px 0 #293E07;  */
 }
 .redButtonStroke {
-    -webkit-text-stroke: 0.2px #681300;
-    /* Adds the stroke */
+    /* -webkit-text-stroke: 0.2px #681300;
     text-shadow:
         -1px -1px 0 #681300,
         1px -1px 0 #681300,
         -1px 1px 0 #681300,
-        1px 1px 0 #681300;
-    /* Simulates an outside stroke */
+        1px 1px 0 #681300; */
 }
 .kimutatasButtonArrowContainer{
     height: 89%;
@@ -155,12 +153,12 @@
     color: #0C594B;
 }
 .bevezetoContainer.active .greenButtonStroke {
-        -webkit-text-stroke: 0px #293E07;
+        /* -webkit-text-stroke: 0px #293E07;
         text-shadow:
             0px 0px 0 #293E07,
             0px 0px 0 #293E07,
             0px 0px 0 #293E07,
-            0px 0px 0 #293E07;
+            0px 0px 0 #293E07; */
 }
 /* .bevezetoArrowImage:hover {
     background-image: url('../imgaes/core-header-gomb-kimutato-bevezeto12.png');
@@ -230,12 +228,12 @@
     color: #0C594B;
 }
 .goodContainer.active .greenButtonStroke {
-        -webkit-text-stroke: 0px #293E07;
+        /* -webkit-text-stroke: 0px #293E07;
         text-shadow:
             0px 0px 0 #293E07,
             0px 0px 0 #293E07,
             0px 0px 0 #293E07,
-            0px 0px 0 #293E07;
+            0px 0px 0 #293E07; */
 }
 /* .goodArrowImage:hover {
     background-image: url('../imgaes/core-header-gomb-kimutato-good12nem_aktiv.png') ;
@@ -976,22 +974,22 @@ width: 160px;
     margin-left: -25px;
 }
 .redButtonStroke{
-    -webkit-text-stroke: 0.1px #681300;
+    /* -webkit-text-stroke: 0.1px #681300;
     letter-spacing: 1.5px;
     text-shadow: 
         -0.7px -0.7px 0 #681300,
         0.7px -0.7px 0 #681300,
         -0.7px 0.7px 0 #681300,
-        0.7px 0.7px 0 #681300; /* Simulates an outside stroke */
+        0.7px 0.7px 0 #681300;  */
 }
 .greenButtonStroke{
-    -webkit-text-stroke: 0.1px #293E07;
+    /* -webkit-text-stroke: 0.1px #293E07;
     letter-spacing: 1.5px;
     text-shadow: 
         -0.7px -0.7px 0 #293E07,
         0.7px -0.7px 0 #293E07,
         -0.7px 0.7px 0 #293E07,
-        0.7px 0.7px 0 #293E07; /* Simulates an outside stroke */
+        0.7px 0.7px 0 #293E07;  */
 }
 
 .bigtextContainer{
