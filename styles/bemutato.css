@@ -154,7 +154,7 @@
 .magas {
     height: 100%;
     width: 33%;
-    background-color: #b3b3b3;
+    background-color: #808080;
     box-shadow: 2px 2px 2px 2px #0002;
     display: flex;
     justify-content: center;
@@ -208,6 +208,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    margin-right: 30px;
 }
 .imageOfBlueMan{
     height: 160px;
@@ -216,7 +217,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin-right: 20px;
+    margin-right: 80px;
 }
 .redTextColor{
     color: #fff;
@@ -331,7 +332,7 @@
 }
 .mediumTextBemutato{
     padding-left: 10px;
-    padding-right: 10px;
+    /* padding-right: 10px; */
 }
 }
 @media (max-width: 500px) {
@@ -367,13 +368,21 @@
 }
 @media (max-width: 400px) {
     .greenLineBox {
-        height: 180px;
+        height: auto;
     }
+.mediumTextBemutato{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .imageOfRedMan{
     height: 120px;
+    margin-right: 20px;
 }
 .imageOfGreenMan {
     height: 120px;
+}
+.imageOfBlueMan{
+    margin-right: 35px;
 }
 .normalAlacsonyMagasContainer {
     height: 50px;
