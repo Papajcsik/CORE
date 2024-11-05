@@ -545,10 +545,15 @@ body{
     }
     .headerText{
         font-size: 16px;
-        -webkit-text-stroke: 0.3px #000;
+        -webkit-text-stroke: 0.2px #000;
         width: 65%;
-        /* margin-right: 25%; */
-    }
+        text-shadow:
+                -0.3px -0.3px 0 #293E07,
+                0.3px -0.3px 0 #293E07,
+                -0.3px 0.3px 0 #293E07,
+                0.3px 0.3px 0 #293E07;
+            /* margin-right: 25%; */
+        }
     .languageSelectorContainer {
         width: 35%;
     }
