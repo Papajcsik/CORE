@@ -102,6 +102,9 @@
     text-align: center;
         transition: opacity 0.5s ease;
 }
+.sameHeight {
+    height: 7vw;
+}
 .chartImage{
     width: 99%;
     aspect-ratio: 1.9;
@@ -281,6 +284,9 @@
         flex-direction: row;
         justify-content: space-evenly;
     }
+    .sameHeight {
+        height: 10vw;
+    }
     .ImageContainer {
         width: 75%;
     }
@@ -342,6 +348,9 @@
 .thankYouContainer{
     width: 80%;
 }
+.sameHeight {
+    height: 12vw;
+}
         .explainingContainer2 {
             width: 98%;
             margin-left: 0px;
@@ -367,12 +376,15 @@
 }
 }
 @media (max-width: 400px) {
+.sameHeight {
+    height: 17vw;
+}
     .greenLineBox {
         height: auto;
     }
 .mediumTextBemutato{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
 .imageOfRedMan{
     height: 120px;
