@@ -111,9 +111,16 @@
     margin: 2px;
 }
 .custom-select select {
+
     -webkit-appearance: none;
+    /* Safari and Chrome */
     -moz-appearance: none;
+    /* Firefox */
+    -ms-appearance: none;
+    /* IE/Edge */
     appearance: none;
+    /* Standard */
+
     background-image: url('../imgaes/Rectangle\ 30.png');
     background-repeat: no-repeat;
     background-position: right 5px center;
@@ -144,6 +151,12 @@
 .custom-select option:hover {
     background-color: #454E24 !important;
 }
+
+.custom-select select::-ms-expand {
+    display: none;
+    /* Hide dropdown arrow in IE/Edge */
+}
+
 .spacer{
     height: 50px;
 }
